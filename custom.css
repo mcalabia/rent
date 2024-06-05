@@ -1,0 +1,4 @@
+.stats-card-stacks .collection-item-3:nth-child(2n) {
+    position: relative;
+    top: 50%;
+}
