@@ -2,3 +2,59 @@
     position: relative;
     top: 50%;
 }
+.param-container {
+	display: none;
+}
+
+.kf-stats{
+  padding-top:10px!important;
+  }
+.hero-right-container {
+	clip-path: inset(0% 100% 0% 0%);
+}
+
+.gs-container,
+section.prop-fixed-scroll .pfp-item {
+	transform: translateY(30px);
+	visibility: hidden;
+	opacity: 0;
+}
+.select-style {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--indigo-200)!important;
+}
+  
+.ff-box,
+.ff-content,
+.cl-logo,
+.solutions-footnote,
+.line-white,
+.pl-logo-container.is-home,
+.about-us.is-home .global-container > * {
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.lp-arrow.t-bg svg::hover {
+    fill: #4561ec;
+}
+.lp-arrow.t-bg svg circle::hover, .lp-arrow.t-bg svg path::hover {
+    stroke: #000;
+}
+.cta:hover {
+    color: var(--indigo);
+    background-color: rgba(0, 0, 0, 0);
+}
+.lp-ctahover {
+    color: var(--indigo);
+    background-color: rgba(0, 0, 0, 0);
+}
+  
+@media only screen and (min-width: 768px) {
+  .w-layout-blockcontainer.resources .res-items .w-layout-cell {
+    opacity: 0;
+    visibility: hidden;
+  }
+ }
