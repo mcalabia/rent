@@ -52,7 +52,11 @@ section.prop-fixed-scroll .pfp-item {
     color: var(--indigo);
     background-color: rgba(0, 0, 0, 0);
 }
-  
+
+.social-icons-div .sharing {
+    transition: background-color 0.3s ease;
+}
+
 .social-icons-div .sharing:hover{
     background-color: #7E93FB;
 }
