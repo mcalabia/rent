@@ -61,9 +61,11 @@ section.prop-fixed-scroll .pfp-item {
     background-color: #7E93FB;
 }
 
-@media only screen and (min-width: 768px) {
+
+
+/* @media only screen and (min-width: 768px) {
   .w-layout-blockcontainer.resources .res-items .w-layout-cell {
     opacity: 0;
     visibility: hidden;
   }
- }
+ } */
