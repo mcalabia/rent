@@ -80,22 +80,24 @@ section.prop-fixed-scroll .pfp-item {
     }
     
     .mktoFormRow .mktoButton{
-        background-color: var(--indigo);
-        color: var(--white);
-        -webkit-text-fill-color: inherit;
-        background-image: url(https://cdn.prod.website-files.com/664bb28…/664bcac…_Group%20422.svg);
-        background-position: 90%;
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-clip: border-box;
-        border-radius: 38px;
-        margin-top: 0;
-        padding: 12px 44px 12px 20px;
-        font-family: Inter Tight, sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: normal;
-        display: block;
+        background-color: var(--indigo) !important;
+    color: var(--white);
+    -webkit-text-fill-color: inherit;
+    background-image: url(https://cdn.prod.website-files.com/664bb28…/664bcac…_Group%20422.svg) !important;
+    background-position: 90%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-clip: border-box;
+    border-radius: 38px;
+    margin-top: 0 !important;
+    padding: 10px 44px 12px 20px;
+    font-family: Inter Tight, sans-serif;
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: normal;
+    display: block;
+    width: auto !important;
+    text-transform: capitalize;
     }
         
 /* MARKETO FORM DESIGN */
