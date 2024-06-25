@@ -79,7 +79,7 @@ section.prop-fixed-scroll .pfp-item {
     line-height: 120%;
     }
     
-    .mktoFormRow .mktoButton{
+    .mktoFormRow button{
         background-color: var(--indigo) !important;
     color: var(--white);
     -webkit-text-fill-color: inherit;
