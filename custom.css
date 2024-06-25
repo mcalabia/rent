@@ -101,15 +101,17 @@ section.prop-fixed-scroll .pfp-item {
     }
         
     .mktoForm input{
-    color: var(--373839);
-    letter-spacing: .28px;
-    border-radius: 50px;
-    margin-bottom: 24px;
-    padding-top: 12px;
-    padding-left: 16px;
-    padding-right: 0;
-    font-family: Inter Tight, sans-serif;
-    line-height: 120%;
+        color: var(--373839) !important;
+        letter-spacing: .28px;
+        border-radius: 50px;
+        margin-bottom: 24px;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        padding-left: 16px !important;
+        padding-right: 0 !important;
+        font-family: Inter Tight, sans-serif;
+        line-height: 120% !important;
+        width: 100% !important;
     }
     
 
