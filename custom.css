@@ -123,7 +123,7 @@ section.prop-fixed-scroll .pfp-item {
     
     .mktoHtmlText.mktoHasWidth {
         margin-bottom: 24px;
-        width: 100%;
+        width: 100%!important;
         color: var(--373839)!important;
         letter-spacing: 0;
         font-family: Inter, sans-serif;
@@ -135,15 +135,12 @@ section.prop-fixed-scroll .pfp-item {
         width: 100%;
         color: var(--373839)!important;
     }
-    .mktoForm .mktoRequiredField label.mktoLabel {
-        display: none;
-    }
 
     .mktoForm{
         width:100%!important;
     }
-    .mktoForm .mktoOffset {
-        display: none;
+    .mktoForm .mktoOffset, .mktoForm .mktoGutter, .mktoForm .mktoRequiredField label.mktoLabel {
+        display: none!important;
     }
 
     .mktoForm .mktoFormCol {
