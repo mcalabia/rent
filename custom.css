@@ -74,9 +74,9 @@ section.prop-fixed-scroll .pfp-item {
 .mktoFormRow h3{
     color: var(--black);
     letter-spacing: .64px;
-    font-family: Rentsans, sans-serif;
+    font-family: Rentsans, sans-serif!important;
     font-size: 32px;
-    line-height: 140%;
+    line-height: 120%;
     }
     
     .mktoFormRow .mktoButton{
