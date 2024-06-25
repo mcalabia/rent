@@ -117,6 +117,7 @@ section.prop-fixed-scroll .pfp-item {
         width: 100% !important;
         font-size: 14px !important;
         height: auto !important;
+        border:0;
     }
     
     .mktoHtmlText.mktoHasWidth {
@@ -127,12 +128,27 @@ section.prop-fixed-scroll .pfp-item {
         font-family: Inter, sans-serif;
         font-size: 15.8px;
         line-height: 120%;
+        width: 100% !important;
     }
     .mktoHtmlText.mktoHasWidth p {
         width: 100%;
-       
+        color: var(--373839)!important;
     }
     .mktoForm .mktoRequiredField label.mktoLabel {
         display: none;
+    }
+
+    .mktoForm{
+        width:100%!important;
+    }
+    .mktoForm .mktoOffset {
+        display: none;
+    }
+
+    .mktoForm .mktoFormCol {
+        width: 100%;
+    }
+    .mktoForm .mktoFieldWrap {
+        width: 100%;
     }
 /* MARKETO FORM DESIGN */
