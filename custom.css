@@ -101,6 +101,7 @@ section.prop-fixed-scroll .pfp-item {
     width: auto !important;
     text-transform: capitalize;
     height: auto;
+    border:0!important;
     }
         
     .mktoForm input{
