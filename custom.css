@@ -104,7 +104,7 @@ section.prop-fixed-scroll .pfp-item {
         color: var(--373839) !important;
         letter-spacing: .28px;
         border-radius: 50px;
-        margin-bottom: 24px!important;
+        margin-bottom: 12px!important;
         padding-top: 12px !important;
         padding-bottom: 12px !important;
         padding-left: 16px !important;
@@ -114,5 +114,8 @@ section.prop-fixed-scroll .pfp-item {
         width: 100% !important;
     }
     
+    .mktoHtmlText.mktoHasWidth {
+        margin-bottom: 24px;
+    }
 
 /* MARKETO FORM DESIGN */
