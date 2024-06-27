@@ -177,6 +177,7 @@ section.prop-fixed-scroll .pfp-item {
         line-height: 120%;
         border: 0;
         width: 100%!important;
+        font-size: 14px !important;
     }
 
 /* MARKETO FORM DESIGN */
