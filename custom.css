@@ -79,7 +79,11 @@ section.prop-fixed-scroll .pfp-item {
 }
 
 .get-started-form .mktoHtmlText.mktoHasWidth{
-    margin: 0;
+    margin: 0!important;
+}
+
+.get-started-form .mktoFormRow:nth-of-type(2){
+    margin-bottom: 24px;
 }
 
 .mktoFormRow h3, .mktoFormRow h2{
