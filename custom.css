@@ -161,7 +161,7 @@ section.prop-fixed-scroll .pfp-item {
         font-family: Inter Tight, sans-serif;
         line-height: 120%;
         border: 0;
-        width: 100%;
+        width: 100%!important;
     }
 
 /* MARKETO FORM DESIGN */
