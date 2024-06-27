@@ -149,4 +149,19 @@ section.prop-fixed-scroll .pfp-item {
     .mktoForm .mktoFieldWrap {
         width: 100%;
     }
+
+    select#Contact_Us_Reason__c{
+        color: var(--373839);
+        letter-spacing: .28px;
+        border-radius: 50px;
+        margin-bottom: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 16px;
+        font-family: Inter Tight, sans-serif;
+        line-height: 120%;
+        border: 0;
+        width: 100%;
+    }
+
 /* MARKETO FORM DESIGN */
