@@ -180,4 +180,17 @@ section.prop-fixed-scroll .pfp-item {
         font-size: 14px !important;
     }
 
+    .mktoForm .mktoError .mktoErrorMsg {
+        background-color: #e53b25 !important;
+        background-image: none !important;
+        border: 1px solid #e53b25 !important;
+        text-shadow: none;
+        box-shadow: none;
+    }
+    .mktoForm .mktoError .mktoErrorArrow {
+        background-color: #e53b25;
+        border: 1px solid #e53b25;
+    }
+
+
 /* MARKETO FORM DESIGN */
