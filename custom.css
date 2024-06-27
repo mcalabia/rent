@@ -32,8 +32,7 @@ section.prop-fixed-scroll .pfp-item {
 .cl-logo,
 .solutions-footnote,
 .line-white,
-.pl-logo-container.is-home,
-.about-us.is-home .global-container > * {
+.pl-logo-container.is-home {
     opacity: 0;
     visibility: hidden;
 }
