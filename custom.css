@@ -184,12 +184,12 @@ section.prop-fixed-scroll .pfp-item {
         background-color: #e53b25 !important;
         background-image: none !important;
         border: 1px solid #e53b25 !important;
-        text-shadow: none;
-        box-shadow: none;
+        text-shadow: none!important;
+        box-shadow: none!important;
     }
     .mktoForm .mktoError .mktoErrorArrow {
-        background-color: #e53b25;
-        border: 1px solid #e53b25;
+        background-color: #e53b25!important;
+        border: 1px solid #e53b25!important;
     }
 
 
