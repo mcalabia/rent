@@ -69,7 +69,7 @@ $(document).ready(function() {
   });
 
   $('#nav_search_btn').click(function() {
-    var query = $('#nav_search').val();
+    var query = $('#nav-search').val();
     var url = 'https://redfin-group.webflow.io/search?query=' + encodeURIComponent(query);
     window.location.href = url;
 });
