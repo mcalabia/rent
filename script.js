@@ -5,11 +5,26 @@ window.onload = function() {
     }
 };
 
+
+
 $(document).ready(function() {
-    $(".nav_search_btn").click(function() {
-        var query = $(".navbar_search_input input").val();
-        window.location.href = "/search?query=" + encodeURIComponent(query);
-    });
+  function performSearch() {
+      var query = $('.navbar_search_input input').val();
+      var url = 'https://redfin-group.webflow.io/search?query=' + encodeURIComponent(query);
+      window.location.href = url;
+  }
+  // Handle button click
+  $('#nav_search_btn').click(function() {
+      performSearch();
+  });
+
+  // Handle Enter key press in the input field
+  $('.navbar_search_input input').keypress(function(event) {
+      if (event.which == 13) { // 13 is the Enter key
+          event.preventDefault();
+          performSearch();
+      }
+  });
 });
 
 
