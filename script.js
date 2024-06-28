@@ -14,7 +14,7 @@ $(document).ready(function() {
       window.location.href = url;
   }
   // Handle button click
-  $('#nav_search_btn').click(function() {
+  $('.nav_search_btn').click(function() {
       performSearch();
   });
 
