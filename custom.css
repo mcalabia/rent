@@ -168,5 +168,11 @@ section.prop-fixed-scroll .pfp-item {
         border: 1px solid #e53b25!important;
     }
 
-
+    .mktoForm button.global-cta {
+        padding: 10px 18px!important;
+    }
+    
+    .global-cta-icon svg {
+        padding: 0!important;
+    }
 /* MARKETO FORM DESIGN */
