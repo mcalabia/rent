@@ -93,6 +93,7 @@ section.prop-fixed-scroll .pfp-item {
     line-height: 120%!important;
     font-weight:400!important;
     margin: 0 !important;
+    padding: 0!important;
     }
     
     .mktoForm input{
