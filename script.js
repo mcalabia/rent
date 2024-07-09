@@ -124,12 +124,33 @@ $(document).ready(function() {
 
   console.log("updated")
 
-  $('form').submit(function(event) {
-    setTimeout(function() {
-      if ($('.w-form-done').is(':visible')) {
-        console.log("form successfully submitted");
-      }
-    }, 100);
+  $('.w-form form').each(function() {
+    var form = $(this);
+
+    // Listen for form submission
+    form.on('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Use AJAX to submit the form
+      $.ajax({
+        type: form.attr('method'),
+        url: form.attr('action'),
+        data: form.serialize(),
+        success: function() {
+          // Log success message when form is successfully submitted
+          console.log('form successfully submitted');
+          // Trigger Webflow's success message
+          form.find('.w-form-done').show();
+          form.find('.w-form-fail').hide();
+          form.hide();
+        },
+        error: function() {
+          // Trigger Webflow's failure message
+          form.find('.w-form-done').hide();
+          form.find('.w-form-fail').show();
+        }
+      });
+    });
   });
 
 });
