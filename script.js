@@ -122,10 +122,26 @@ $(document).ready(function() {
     }
   });
 
+  console.log("updated")
+
+  $(document).on('submit-success', function() {
+    // Log the success message to the console
+    console.log("form successfully submitted");
+  });
+  
+  // Alternatively, listen for form submission on Webflow forms
+  $('.w-form').on('submit', function() {
+    var $form = $(this);
+    
+    // Webflow attaches a 'w-form-done' class to the form element upon successful submission
+    $form.find('.w-form-done').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+      // Log the success message to the console
+      console.log("form successfully submitted");
+    });
+  });
+
 });
 
-$("form").submit(()=>{	
-  console.log("form submission is working");
-});
+
 
 
