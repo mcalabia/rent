@@ -124,9 +124,9 @@ $(document).ready(function() {
 
   console.log("updated")
 
-  $('.w-form form').each(function() {
+  $('form').each(function() {
     var form = $(this);
-
+    console.log("form working")
     // Listen for form submission
     form.on('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
