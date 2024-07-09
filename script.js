@@ -125,7 +125,10 @@ $(document).ready(function() {
   var Webflow = Webflow || [];
 Webflow.push(function() {
   $('form').submit(function() {
-    setTimeout(function() { location.reload(true); }, 1000);
+    setTimeout(function() { 
+      console.log("form submitted");
+      location.reload(true); 
+    }, 1000);
   });
 });
 });
