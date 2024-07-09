@@ -122,15 +122,10 @@ $(document).ready(function() {
     }
   });
 
-  var Webflow = Webflow || [];
-Webflow.push(function() {
-  $('form').submit(function() {
-    setTimeout(function() { 
-      console.log("form submitted");
-      location.reload(true); 
-    }, 1000);
-  });
 });
+
+$(form).submit(()=>{	
+  console.log("form submission is working");
 });
 
 
