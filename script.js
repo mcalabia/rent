@@ -126,11 +126,11 @@ $(document).ready(function() {
 
   $('form').each(function() {
     var form = $(this);
-    console.log("form working")
+    
     // Listen for form submission
     form.on('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
-
+      console.log("form working")
       // Use AJAX to submit the form
       $.ajax({
         type: form.attr('method'),
@@ -139,15 +139,8 @@ $(document).ready(function() {
         success: function() {
           // Log success message when form is successfully submitted
           console.log('form successfully submitted');
-          // Trigger Webflow's success message
-          form.find('.w-form-done').show();
-          form.find('.w-form-fail').hide();
-          form.hide();
         },
         error: function() {
-          // Trigger Webflow's failure message
-          form.find('.w-form-done').hide();
-          form.find('.w-form-fail').show();
         }
       });
     });
