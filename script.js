@@ -124,7 +124,7 @@ $(document).ready(function() {
 
 });
 
-$(form).submit(()=>{	
+$("form").submit(()=>{	
   console.log("form submission is working");
 });
 
