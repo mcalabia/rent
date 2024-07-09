@@ -122,15 +122,20 @@ $(document).ready(function() {
     }
   });
 
-  console.log("updated")
+});
 
+
+
+
+$(document).ready(function() {
   $('form').each(function() {
     var form = $(this);
-    
+
     // Listen for form submission
     form.on('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
-      console.log("form working")
+      console.log("form working");
+
       // Use AJAX to submit the form
       $.ajax({
         type: form.attr('method'),
@@ -139,15 +144,37 @@ $(document).ready(function() {
         success: function() {
           // Log success message when form is successfully submitted
           console.log('form successfully submitted');
+
+          // Observe changes to the .w-form-done element
+          var formDone = form.find('.w-form-done')[0];
+          if (formDone) {
+            var observer = new MutationObserver(function(mutations) {
+              mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                  var displayStyle = window.getComputedStyle(formDone).display;
+                  if (displayStyle === 'block') {
+                    console.log('Form done element is now visible');
+                  }
+                }
+              });
+            });
+
+            // Configuration of the observer:
+            var config = {
+              attributes: true,
+              attributeFilter: ['style']
+            };
+
+            // Pass in the target node, as well as the observer options
+            observer.observe(formDone, config);
+          }
         },
         error: function() {
+          console.log('form submission failed');
         }
       });
     });
   });
-
 });
-
-
 
 
