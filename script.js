@@ -133,14 +133,15 @@ $(document).ready(function() {
   var observer = new MutationObserver(function(mutationsList, observer) {
     mutationsList.forEach(function(mutation) {
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
-        console.log("succesfully submitted");
         setTimeout(function() {
-          $('.close-img').click();
-        }, 3000);
+          $('.get-started-form-slider, .form-slider-mobile').addClass('fade-out');
+          setTimeout(function() {
+            $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
+          }, 300); 
+        }, 3000); 
       }
     });
   });
-
 
   var config = { attributes: true };
   observer.observe(form[0], config);
