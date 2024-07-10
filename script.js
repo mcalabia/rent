@@ -133,6 +133,7 @@ $(document).ready(function() {
   var observer = new MutationObserver(function(mutationsList, observer) {
     mutationsList.forEach(function(mutation) {
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
+        console.log("sent");
         setTimeout(function() {
           $('.get-started-form-slider, .form-slider-mobile').addClass('fade-out');
           setTimeout(function() {
