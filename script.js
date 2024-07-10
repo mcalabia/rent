@@ -162,7 +162,7 @@ function keyFeaturesMobile() {
                     console.log(index);
 
                   
-                    const targetContent = subSelf.find(".is-kf-mobile").data("index");
+                    const targetContent = subSelf.find(".is-kf-mobile");
                     
                     console.log(targetContent);
 
