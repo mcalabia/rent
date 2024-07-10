@@ -177,3 +177,7 @@ section.prop-fixed-scroll .pfp-item {
         padding: 0!important;
     }
 /* MARKETO FORM DESIGN */
+
+.kf-item-mobile.open .is-kf-mobile {
+    display: block !important;
+}
