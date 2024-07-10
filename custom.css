@@ -177,13 +177,3 @@ section.prop-fixed-scroll .pfp-item {
         padding: 0!important;
     }
 /* MARKETO FORM DESIGN */
-
-.get-started-form-slider, .form-slider-mobile {
-    opacity: 1; /* Initial opacity */
-    transition: opacity 0.3s ease-out, display 0s 0.3s; /* Transition opacity, delay display change */
-  }
-  
-  .get-started-form-slider.fade-out, .form-slider-mobile.fade-out {
-    opacity: 0;
-  }
-  
