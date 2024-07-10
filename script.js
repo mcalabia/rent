@@ -130,22 +130,18 @@ $(document).ready(function() {
 $(document).ready(function() {
   console.log('mutation');
   var form = $('form');
-  // Create a new MutationObserver
   var observer = new MutationObserver(function(mutationsList, observer) {
-    // Loop through all mutations
     mutationsList.forEach(function(mutation) {
-      // Check if the display property of the form has changed to none
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
-        // You can perform side logic here
-        console.log('Form is now hidden, probably the form was submitted');
+        setTimeout(function() {
+          $('.close-img').click();
+        }, 3000);
       }
     });
   });
 
-  // Configure the observer to watch for changes in attributes
-  var config = { attributes: true };
 
-  // Start observing the target form element for attribute changes
+  var config = { attributes: true };
   observer.observe(form[0], config);
 });
 
