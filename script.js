@@ -145,9 +145,9 @@ $(document).ready(function() {
 
 // =====================
 function keyFeaturesMobile() {
-  $(".kf-tab-text").click(function (e) { 
+  $(".kf-tab-text-mobile").click(function (e) { 
       e.preventDefault();
-      const content = $(this).next(".kf-content");
+      const content = $(this).next(".is-kf-mobile");
 
       if (content.css("display") === "none") {
           content.css("display", "block");
