@@ -171,7 +171,7 @@ function keyFeaturesMobile() {
                         allItems.removeClass("open");
 
                         subSelf.addClass("open");
-                        gsap.fromTo(body,
+                        gsap.fromTo(targetContent,
                           {
                               height: 0,
                               autoAlpha: 0,
