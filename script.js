@@ -145,7 +145,7 @@ $(document).ready(function() {
 
 // =====================
 function keyFeaturesMobile() {
-  const containers = $(".kf-tab-mobile");
+  const containers = $(".kf-item-mobile");
   if (!containers.length) return;
 
   containers.each(function () {
@@ -160,6 +160,7 @@ function keyFeaturesMobile() {
           const subSelf = $(this);
           const index = subSelf.data("index");
           console.log(subSelf+" "+index);
+
           const targetContent = allContent.filter(function () {
               return $(this).data('index') === index;
           });
