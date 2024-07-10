@@ -180,9 +180,12 @@ section.prop-fixed-scroll .pfp-item {
 
 .kf-item-mobile.open .is-kf-mobile {
     display: block !important;
-    border-bottom: 1px solid #000!important;
 }
 
-.kf-item-mobile.open .is-kf-mobile .kf-tab-text-mobile{
+.kf-item-mobile.open .kf-tab-text-mobile{
     color: #000 !important;
+}
+
+.kf-item-mobile.open{
+    border-bottom: 1px solid #000!important;
 }
