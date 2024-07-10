@@ -145,62 +145,63 @@ $(document).ready(function() {
 
 // =====================
 function keyFeaturesMobile() {
-  const containers = $(".kf-item-mobile");
-  if (!containers.length) return;
+            const containers = $(".kf-items-mobile");
+            if (!containers.length) return;
 
-  containers.each(function () {
-      const self = $(this);
-      const allItems = self.find(".kf-tab-text-mobile");
-      const allContent = self.find(".is-kf-mobile");
+            containers.each(function () {
+                const self = $(this);
+                const allItems = self.find(".kf-item-mobile");
+                const allContent = self.find(".is-kf-mobile");
 
-      addIndex(allItems);
-      addIndex(allContent);
+                addIndex(allItems);
+                addIndex(allContent);
 
-      allItems.click(function () {
-          const subSelf = allContent;
-          const index = subSelf.data("index");
-          console.log(allContent.data('index'));
+                allItems.click(function () {
+                    const subSelf = $(this);
+                    const index = subSelf.data("index");
+                    console.log(index);
 
-          const targetContent = allContent.filter(function () {
-              return allContent.data('index') === index;
-          });
+                    const targetContent = allContent.filter(function () {
+                        return $(this).data('index') === index;
+                    });
+                    console.log(targetContent);
 
-          if (!subSelf.hasClass("open")) {
-              resetItems(allContent);
-              allItems.removeClass("open");
+                    if (!subSelf.hasClass("open")) {
+                        resetItems(allContent);
+                        allItems.removeClass("open");
 
-              subSelf.addClass("open");
-              gsap.fromTo(targetContent,
-                  {
-                      height: 0,
-                      autoAlpha: 0,
-                  },
-                  {
-                      height: "auto",
-                      duration: 0.6,
-                      autoAlpha: 1,
-                      ease: "power2.out",
-                      overwrite: true,
-                      onComplete: function() {
-                          targetContent.css("height", "auto");
-                      }
-                  }
-              );
-          }
-      });
+                        subSelf.addClass("open");
+                        gsap.fromTo(targetContent,
+                            {
+                                height: 0,
+                                autoAlpha: 0,
+                            },
+                            {
+                                height: "auto",
+                                duration: 0.6,
+                                autoAlpha: 1,
+                                ease: "power2.out",
+                                overwrite: true,
+                                onComplete: function() {
+                                    targetContent.css("height", "auto");
+                                }
+                            }
+                        );
+                    }
+                });
 
-      allItems[0].click();
-  });
+                allItems[0].click();
+            });
 
-  function addIndex(elements) {
-      elements.each(function (index) {
-          $(this).attr('data-index', index);
-      });
-  }
+            function addIndex(elements) {
+                elements.each(function (index) {
+                    $(this).attr('data-index', index);
+                });
+            }
 
-  function resetItems(elements) {
-      elements.css("height", 0).css("display", "none");
-  }
-}
+            function resetItems(elements) {
+                elements.css("height", 0).css("display", "none");
+            }
+        }
 
-keyFeaturesMobile();
+        keyFeaturesMobile();
