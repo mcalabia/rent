@@ -157,9 +157,9 @@ function keyFeaturesMobile() {
       addIndex(allContent);
 
       allItems.click(function () {
-          const subSelf = $(this);
+          const subSelf = allContent;
           const index = subSelf.data("index");
-          console.log(subSelf+" "+index);
+          console.log($(this).data('index'));
 
           const targetContent = allContent.filter(function () {
               return $(this).data('index') === index;
