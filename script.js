@@ -161,9 +161,9 @@ function keyFeaturesMobile() {
                     const index = subSelf.data("index");
                     console.log(index);
 
-                    const targetContent = allContent.filter(function () {
-                        return $(this).find(".is-kf-mobile").data('index') === index;
-                    });
+                  
+                    const targetContent = subSelf.find(".is-kf-mobile").data("index");
+                    
                     console.log(targetContent);
 
                     if (!subSelf.hasClass("open")) {
