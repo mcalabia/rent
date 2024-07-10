@@ -133,9 +133,11 @@ $(document).ready(function() {
   var observer = new MutationObserver(function(mutationsList, observer) {
     mutationsList.forEach(function(mutation) {
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
+        setTimeout(function() {
         gsap.to('.get-started-form-slider, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
           $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
         }});
+      }, 3000); // 3-second delay
       }
     });
   });
