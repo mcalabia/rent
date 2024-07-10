@@ -133,6 +133,7 @@ $(document).ready(function() {
   var observer = new MutationObserver(function(mutationsList, observer) {
     mutationsList.forEach(function(mutation) {
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
+        console.log("succesfully submitted");
         setTimeout(function() {
           $('.close-img').click();
         }, 3000);
