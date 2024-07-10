@@ -121,11 +121,7 @@ $(document).ready(function() {
       });
     }
   });
-
 });
-
-
-
 
 $(document).ready(function() {
   console.log('mutation');
@@ -147,4 +143,33 @@ $(document).ready(function() {
 });
 
 
+// =====================
+function keyFeaturesMobile() {
+  $(".kf-tab-text").click(function (e) { 
+      e.preventDefault();
+      const content = $(this).next(".kf-content");
 
+      if (content.css("display") === "none") {
+          content.css("display", "block");
+
+          gsap.fromTo(content,
+              {
+                  height: 0,
+                  autoAlpha: 0,
+              },
+              {
+                  height: content[0].scrollHeight,
+                  duration: 0.6,
+                  autoAlpha: 1,
+                  ease: "power2.out",
+                  overwrite: true,
+                  onComplete: function() {
+                      content.css("height", "auto");
+                  }
+              }
+          );
+      }
+  });
+}
+
+keyFeaturesMobile();
