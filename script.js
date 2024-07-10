@@ -138,7 +138,7 @@ $(document).ready(function() {
           $('.get-started-form-slider, .form-slider-mobile').addClass('fade-out');
           setTimeout(function() {
             $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
-          }, 1000); 
+          }, 300); 
         }, 3000); 
       }
     });
