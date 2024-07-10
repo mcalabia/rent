@@ -128,53 +128,26 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-  $('form').each(function() {
-    var form = $(this);
-
-    // Listen for form submission
-    form.on('submit', function(event) {
-      event.preventDefault(); // Prevent default form submission
-      console.log("form working");
-
-      // Use AJAX to submit the form
-      $.ajax({
-        type: form.attr('method'),
-        url: form.attr('action'),
-        data: form.serialize(),
-        success: function() {
-          // Log success message when form is successfully submitted
-          console.log('form successfully submitted');
-
-          // Observe changes to the .w-form-done element
-          var formDone = form.find('.w-form-done')[0];
-          if (formDone) {
-            var observer = new MutationObserver(function(mutations) {
-              mutations.forEach(function(mutation) {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-                  var displayStyle = window.getComputedStyle(formDone).display;
-                  if (displayStyle === 'block') {
-                    console.log('Form done element is now visible');
-                  }
-                }
-              });
-            });
-
-            // Configuration of the observer:
-            var config = {
-              attributes: true,
-              attributeFilter: ['style']
-            };
-
-            // Pass in the target node, as well as the observer options
-            observer.observe(formDone, config);
-          }
-        },
-        error: function() {
-          console.log('form submission failed');
-        }
-      });
+  console.log('mutation');
+  var form = $('form');
+  // Create a new MutationObserver
+  var observer = new MutationObserver(function(mutationsList, observer) {
+    // Loop through all mutations
+    mutationsList.forEach(function(mutation) {
+      // Check if the display property of the form has changed to none
+      if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
+        // You can perform side logic here
+        console.log('Form is now hidden, probably the form was submitted');
+      }
     });
   });
+
+  // Configure the observer to watch for changes in attributes
+  var config = { attributes: true };
+
+  // Start observing the target form element for attribute changes
+  observer.observe(form[0], config);
 });
+
 
 
