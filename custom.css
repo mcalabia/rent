@@ -181,3 +181,7 @@ section.prop-fixed-scroll .pfp-item {
 .kf-item-mobile.open .is-kf-mobile {
     display: block !important;
 }
+
+.kf-item-mobile.open .is-kf-mobile .kf-tab-text-mobile{
+    color: #000 !important;
+}
