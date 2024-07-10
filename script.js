@@ -171,22 +171,19 @@ function keyFeaturesMobile() {
                         allItems.removeClass("open");
 
                         subSelf.addClass("open");
-                        gsap.fromTo(targetContent,
-                            {
-                                height: 0,
-                                autoAlpha: 0,
-                            },
-                            {
-                                height: "auto",
-                                duration: 0.6,
-                                autoAlpha: 1,
-                                ease: "power2.out",
-                                overwrite: true,
-                                onComplete: function() {
-                                    targetContent.css("height", "auto");
-                                }
-                            }
-                        );
+                        gsap.fromTo(body,
+                          {
+                              height: 0,
+                              autoAlpha: 0,
+                          },
+                          {
+                              height: "auto",
+                              duration: 0.6,
+                              autoAlpha: 1,
+                              ease: Power2.easeOut,
+                              overwrite: true
+                          }
+                      );
                     }
                 });
 
