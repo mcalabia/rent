@@ -162,7 +162,7 @@ function keyFeaturesMobile() {
                     console.log(index);
 
                     const targetContent = allContent.filter(function () {
-                        return $(this+ " .is-kf-mobile").data('index') === index;
+                        return $(this).find(".is-kf-mobile").data('index') === index;
                     });
                     console.log(targetContent);
 
