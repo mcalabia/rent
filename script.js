@@ -159,10 +159,10 @@ function keyFeaturesMobile() {
       allItems.click(function () {
           const subSelf = allContent;
           const index = subSelf.data("index");
-          console.log($(this).data('index'));
+          console.log(allContent.data('index'));
 
           const targetContent = allContent.filter(function () {
-              return $(this).data('index') === index;
+              return allContent.data('index') === index;
           });
 
           if (!subSelf.hasClass("open")) {
