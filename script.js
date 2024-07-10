@@ -145,31 +145,61 @@ $(document).ready(function() {
 
 // =====================
 function keyFeaturesMobile() {
-  $(".kf-tab-text-mobile").click(function (e) { 
-      e.preventDefault();
-      const content = $(this).next(".is-kf-mobile");
+  const containers = $(".kf-tab-mobile");
+  if (!containers.length) return;
 
-      if (content.css("display") === "none") {
-          content.css("display", "block");
+  containers.each(function () {
+      const self = $(this);
+      const allItems = self.find(".kf-tab-text-mobile");
+      const allContent = self.find(".is-kf-mobile");
 
-          gsap.fromTo(content,
-              {
-                  height: 0,
-                  autoAlpha: 0,
-              },
-              {
-                  height: content[0].scrollHeight,
-                  duration: 0.6,
-                  autoAlpha: 1,
-                  ease: "power2.out",
-                  overwrite: true,
-                  onComplete: function() {
-                      content.css("height", "auto");
+      addIndex(allItems);
+      addIndex(allContent);
+
+      allItems.click(function () {
+          const subSelf = $(this);
+          const index = subSelf.data("index");
+
+          const targetContent = allContent.filter(function () {
+              return $(this).data('index') === index;
+          });
+
+          if (!subSelf.hasClass("open")) {
+              resetItems(allContent);
+              allItems.removeClass("open");
+
+              subSelf.addClass("open");
+              gsap.fromTo(targetContent,
+                  {
+                      height: 0,
+                      autoAlpha: 0,
+                  },
+                  {
+                      height: "auto",
+                      duration: 0.6,
+                      autoAlpha: 1,
+                      ease: "power2.out",
+                      overwrite: true,
+                      onComplete: function() {
+                          targetContent.css("height", "auto");
+                      }
                   }
-              }
-          );
-      }
+              );
+          }
+      });
+
+      allItems[0].click();
   });
+
+  function addIndex(elements) {
+      elements.each(function (index) {
+          $(this).attr('data-index', index);
+      });
+  }
+
+  function resetItems(elements) {
+      elements.css("height", 0).css("display", "none");
+  }
 }
 
 keyFeaturesMobile();
