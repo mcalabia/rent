@@ -144,6 +144,8 @@ $(document).ready(function() {
 
 
 // =====================
+$(document).ready(function () {
+
 function keyFeaturesMobile() {
             const containers = $(".kf-items-mobile");
             if (!containers.length) return;
@@ -171,6 +173,7 @@ function keyFeaturesMobile() {
                         allItems.removeClass("open");
 
                         subSelf.addClass("open");
+                        
                         gsap.fromTo(targetContent,
                           {
                               height: 0,
@@ -199,6 +202,22 @@ function keyFeaturesMobile() {
             function resetItems(elements) {
                 elements.css("height", 0).css("display", "none");
             }
-        }
+}
+function mobileNavSearch() {
+  $(".navbar_search_btn_mob").click(function(){
+    // Fade out the search button
+    $(this).fadeOut(300, function(){
+        // Show and slide in the search inner mobile element
+        $(".navbar_search_inner_mobile").css("display", "block");
+        gsap.fromTo(".navbar_search_inner_mobile", 
+            {x: "-100%"}, 
+            {x: "0%", duration: 1}
+        );
+    });
+});
+}
 
-        keyFeaturesMobile();
+keyFeaturesMobile();
+mobileNavSearch();
+
+});
