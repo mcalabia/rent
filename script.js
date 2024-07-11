@@ -7,25 +7,7 @@ window.onload = function() {
 
 
 
-$(document).ready(function() {
-  function performSearch() {
-      var query = $('.navbar_search_input input').val();
-      var url = 'https://redfin-group.webflow.io/search?query=' + encodeURIComponent(query);
-      window.location.href = url;
-  }
-  // Handle button click
-  $('.nav_search_btn').click(function() {
-      performSearch();
-  });
 
-  // Handle Enter key press in the input field
-  $('.navbar_search_input input').keypress(function(event) {
-      if (event.which == 13) { // 13 is the Enter key
-          event.preventDefault();
-          performSearch();
-      }
-  });
-});
 // UTM AND MARKETO
 (function () {
     const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -218,6 +200,25 @@ function mobileNavSearch() {
 });
 }
 
+
+function navSearch(inputClass, btnClass){
+  function performSearch() {
+    var query = $(inputClass).val();
+    var url = 'https://redfin-group.webflow.io/search?query=' + encodeURIComponent(query);
+    window.location.href = url;
+    }
+    $(nav_search_btn).click(function() {
+        performSearch();
+    });
+    $(inputClass).keypress(function(event) {
+        if (event.which == 13) { 
+            event.preventDefault();
+            performSearch();
+        }
+    });
+}
+navSearch('.navbar_search_input input', '.nav_search_btn');
+navSearch('.navbar_search_input_mobile input', '.nav_search_btn_mobile');
 keyFeaturesMobile();
 mobileNavSearch();
 
