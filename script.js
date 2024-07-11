@@ -208,8 +208,8 @@ function mobileNavSearch() {
     // Fade out the search button
     $(this).fadeOut(300, function(){
         // Show and slide in the search inner mobile element
-        $(".navbar_search_inner_mobile").css("display", "block");
-        gsap.fromTo(".navbar_search_inner_mobile", 
+        $(".navbar_search_mobile").css("display", "block");
+        gsap.fromTo(".navbar_search_mobile", 
             {x: "-100%"}, 
             {x: "0%", duration: 1}
         );
