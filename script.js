@@ -209,9 +209,10 @@ function mobileNavSearch() {
     $(this).fadeOut(300, function(){
         // Show and slide in the search inner mobile element
         $(".navbar_search_mobile").css("display", "block");
+        $(".navbar_search_inner_mobile").css("opacity", "1");
         gsap.fromTo(".navbar_search_mobile", 
-            {x: "-100%"}, 
-            {x: "0%", duration: 1}
+            {x: "-100%", opacity: 0}, 
+            {x: "0%", opacity: 1, duration: 1}
         );
     });
 });
