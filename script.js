@@ -207,7 +207,7 @@ function navSearch(inputClass, btnClass){
     var url = 'https://redfin-group.webflow.io/search?query=' + encodeURIComponent(query);
     window.location.href = url;
     }
-    $(nav_search_btn).click(function() {
+    $(btnClass).click(function() {
         performSearch();
     });
     $(inputClass).keypress(function(event) {
