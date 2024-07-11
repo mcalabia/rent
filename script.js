@@ -218,7 +218,7 @@ function navSearch(inputClass, btnClass){
     });
 }
 navSearch('.navbar_search_input input', '.nav_search_btn');
-navSearch('.navbar_search_input_mobile input', '.navbar_search_btn_mob');
+navSearch('.navbar_search_input_mobile input', '.nav_search_btn_mobile');
 keyFeaturesMobile();
 mobileNavSearch();
 
