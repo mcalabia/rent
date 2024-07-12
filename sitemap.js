@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var pageTitle = segments.pop().replace(/-/g, ' ').replace('.html', ''); // Extract page title from relative URL
 
           if (segments.length === 0) {
-            // Skip root path and home page
+            // Skip URLs with blank parent (root level)
             continue;
           }
 
