@@ -9,3 +9,7 @@
 .sitemap li::marker {
     color: #4561ec;
   }
+
+  .sitemap li a:hover {
+    color: #4561ec;
+}
