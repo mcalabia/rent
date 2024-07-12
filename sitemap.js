@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
           return;
         }
 
+        var rootList = document.createElement('ul');
         var urlMap = {};
 
         for (var i = 0; i < urls.length; i++) {
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var segments = relativeUrl.split('/').filter(Boolean);
           var pageTitle = segments.pop().replace(/-/g, ' ').replace('.html', ''); // Extract page title from relative URL
 
-          var parent = pageListContainer;
+          var parent = rootList;
           var path = '';
 
           segments.forEach(segment => {
@@ -47,6 +48,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
           listItem.appendChild(pageLink);
           parent.appendChild(listItem);
+        }
+
+        // Remove the root list item if it has only one child
+        if (rootList.children.length === 1) {
+          var firstChild = rootList.children[0];
+          var grandChildren = firstChild.querySelector('ul');
+          if (grandChildren) {
+            var newRootList = document.createElement('ul');
+            for (var j = 0; j < grandChildren.children.length; j++) {
+              newRootList.appendChild(grandChildren.children[j].cloneNode(true));
+            }
+            pageListContainer.appendChild(newRootList);
+          }
+        } else {
+          pageListContainer.appendChild(rootList);
         }
       })
       .catch(error => console.error('Error fetching sitemap:', error));
