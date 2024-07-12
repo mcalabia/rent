@@ -18,14 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
         var rootList = document.createElement('ul');
         var urlMap = {};
 
-        // Manually add homepage link
-        var listItem = document.createElement('li');
-        var homeLink = document.createElement('a');
-        homeLink.href = '/';
-        homeLink.textContent = 'homepage';
-        listItem.appendChild(homeLink);
-        rootList.appendChild(listItem);
-
         for (var i = 0; i < urls.length; i++) {
           var loc = urls[i].getElementsByTagName("loc")[0].textContent;
           var relativeUrl = loc.replace('https://solutions.rent.com', ''); // Extract relative URL
