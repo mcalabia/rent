@@ -50,7 +50,20 @@ document.addEventListener("DOMContentLoaded", function() {
           parent.appendChild(listItem);
         }
 
-        pageListContainer.appendChild(rootList);
+        // Remove the first parent if it has children
+        if (rootList.children.length === 1) {
+          var firstChild = rootList.children[0];
+          var grandChildren = firstChild.querySelector('ul');
+          if (grandChildren) {
+            var newRootList = document.createElement('ul');
+            for (var j = 0; j < grandChildren.children.length; j++) {
+              newRootList.appendChild(grandChildren.children[j].cloneNode(true));
+            }
+            pageListContainer.appendChild(newRootList);
+          }
+        } else {
+          pageListContainer.appendChild(rootList);
+        }
       })
       .catch(error => console.error('Error fetching sitemap:', error));
   }
