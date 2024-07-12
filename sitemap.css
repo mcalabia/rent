@@ -5,3 +5,7 @@
     font-size: 20px;
     line-height: 160%;
 }
+
+.sitemap li::marker {
+    color: #4561ec;
+  }
