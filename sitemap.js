@@ -18,18 +18,20 @@ document.addEventListener("DOMContentLoaded", function() {
         var rootList = document.createElement('ul');
         var urlMap = {};
 
+        // Manually add homepage link
+        var listItem = document.createElement('li');
+        var homeLink = document.createElement('a');
+        homeLink.href = '/';
+        homeLink.textContent = 'homepage';
+        listItem.appendChild(homeLink);
+        rootList.appendChild(listItem);
+
         for (var i = 0; i < urls.length; i++) {
           var loc = urls[i].getElementsByTagName("loc")[0].textContent;
           var relativeUrl = loc.replace('https://solutions.rent.com', ''); // Extract relative URL
 
           var segments = relativeUrl.split('/').filter(Boolean);
-
-          var pageTitle;
-          if (segments.length === 0) {
-            pageTitle = 'homepage';
-          } else {
-            pageTitle = segments.pop().replace(/-/g, ' ').replace('.html', '');
-          }
+          var pageTitle = segments.pop().replace(/-/g, ' ').replace('.html', ''); // Extract page title from relative URL
 
           var parent = rootList;
           var path = '';
@@ -49,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
           var listItem = document.createElement('li');
           var pageLink = document.createElement('a');
-          pageLink.href = relativeUrl || '/';
+          pageLink.href = relativeUrl;
           pageLink.textContent = pageTitle;
 
           listItem.appendChild(pageLink);
