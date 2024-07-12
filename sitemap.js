@@ -16,15 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         var rootList = document.createElement('ul');
-        var urlMap = {};
-
-        // Manually add homepage link
-        var listItem = document.createElement('li');
-        var homeLink = document.createElement('a');
-        homeLink.href = '/';
-        homeLink.textContent = 'homepage';
-        listItem.appendChild(homeLink);
-        rootList.appendChild(listItem);
 
         for (var i = 0; i < urls.length; i++) {
           var loc = urls[i].getElementsByTagName("loc")[0].textContent;
@@ -38,15 +29,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
           segments.forEach(segment => {
             path += '/' + segment;
-            if (!urlMap[path]) {
-              var listItem = document.createElement('li');
-              listItem.textContent = segment.replace(/-/g, ' ');
-              var sublist = document.createElement('ul');
+            var listItem = findOrCreateListItem(parent, segment);
+            var sublist = listItem.querySelector('ul');
+            if (!sublist) {
+              sublist = document.createElement('ul');
               listItem.appendChild(sublist);
-              parent.appendChild(listItem);
-              urlMap[path] = sublist;
             }
-            parent = urlMap[path];
+            parent = sublist;
           });
 
           var listItem = document.createElement('li');
@@ -61,6 +50,19 @@ document.addEventListener("DOMContentLoaded", function() {
         pageListContainer.appendChild(rootList);
       })
       .catch(error => console.error('Error fetching sitemap:', error));
+  }
+
+  function findOrCreateListItem(parent, segment) {
+    var listItems = parent.querySelectorAll('li');
+    for (var i = 0; i < listItems.length; i++) {
+      if (listItems[i].textContent.trim() === segment.replace(/-/g, ' ')) {
+        return listItems[i];
+      }
+    }
+    var listItem = document.createElement('li');
+    listItem.textContent = segment.replace(/-/g, ' ');
+    parent.appendChild(listItem);
+    return listItem;
   }
 
   fetchSitemap(sitemapUrl);
