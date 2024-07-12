@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
           var listItem = document.createElement('li');
           var pageLink = document.createElement('a');
-          pageLink.href = relativeUrl;
+          pageLink.href = relativeUrl || '/';
           pageLink.textContent = pageTitle;
 
           listItem.appendChild(pageLink);
