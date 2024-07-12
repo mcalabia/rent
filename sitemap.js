@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
           segments.forEach(segment => {
             path += '/' + segment;
-            console.log("segment: " + segment);
-            if (!urlMap[path] || urlMap[path] == "") {
+            if (!urlMap[path]) {
               var listItem = document.createElement('li');
               listItem.textContent = segment.replace(/-/g, ' ');
               var sublist = document.createElement('ul');
