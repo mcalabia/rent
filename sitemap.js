@@ -33,15 +33,21 @@ document.addEventListener("DOMContentLoaded", function() {
           var parent = rootList;
           var path = '';
 
-          segments.forEach(segment => {
+          segments.forEach((segment, index) => {
             path += '/' + segment;
             if (!urlMap[path]) {
               var listItem = document.createElement('li');
               listItem.textContent = segment.replace(/-/g, ' ');
-              var sublist = document.createElement('ul');
-              listItem.appendChild(sublist);
-              parent.appendChild(listItem);
-              urlMap[path] = sublist;
+
+              if (index === 0) {
+                // Remove parent for the first level of hierarchy
+                rootList.appendChild(listItem);
+              } else {
+                var sublist = document.createElement('ul');
+                listItem.appendChild(sublist);
+                parent.appendChild(listItem);
+                urlMap[path] = sublist;
+              }
             }
             parent = urlMap[path];
           });
@@ -55,14 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
           parent.appendChild(listItem);
         }
 
-        // Remove empty rootList if no valid children were added
-        if (rootList.children.length === 0) {
-          rootList = null;
-        }
-
-        if (rootList) {
-          pageListContainer.appendChild(rootList);
-        }
+        pageListContainer.appendChild(rootList);
       })
       .catch(error => console.error('Error fetching sitemap:', error));
   }
