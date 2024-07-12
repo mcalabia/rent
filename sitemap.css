@@ -1,4 +1,4 @@
-.sitemap li{
+.sitemap li, .sitemap li a{
     text-transform: capitalize;
     color: black;
     text-decoration: none;
