@@ -55,7 +55,14 @@ document.addEventListener("DOMContentLoaded", function() {
           parent.appendChild(listItem);
         }
 
-        pageListContainer.appendChild(rootList);
+        // Remove empty rootList if no valid children were added
+        if (rootList.children.length === 0) {
+          rootList = null;
+        }
+
+        if (rootList) {
+          pageListContainer.appendChild(rootList);
+        }
       })
       .catch(error => console.error('Error fetching sitemap:', error));
   }
