@@ -106,7 +106,6 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  console.log('mutation');
   var form = $('form');
   var observer = new MutationObserver(function(mutationsList, observer) {
     mutationsList.forEach(function(mutation) {
@@ -143,12 +142,10 @@ function keyFeaturesMobile() {
                 allItems.click(function () {
                     const subSelf = $(this);
                     const index = subSelf.data("index");
-                    console.log(index);
 
                   
                     const targetContent = subSelf.find(".is-kf-mobile");
-                    
-                    console.log(targetContent);
+                  
 
                     if (!subSelf.hasClass("open")) {
                         resetItems(allContent);
