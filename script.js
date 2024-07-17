@@ -223,16 +223,12 @@ mobileNavSearch();
 
 $(document).mouseup(function(e) {
   var container = $(".get-started-form-slider"); 
-  if (!container.is(e.target) && container.has(e.target).length === 0) {
+  if (!container.is(e.target) && container.has(e.target).length === 0) {        
     container.css({
-      transform: 'translate3d(101vw, 0px, 0px)',
-      opacity: 0
+      transform: 'translate3d(101vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
+      'transform-style': 'preserve-3d',
+      opacity: 0,
+      display: 'none'
     });
-    
-    // Use setTimeout to change the display property after the transition
-    setTimeout(function() {
-      container.css('display', 'none');
-    }, 500); // This should match the transition duration
   }
 });
-
