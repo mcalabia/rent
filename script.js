@@ -201,7 +201,7 @@ function mobileNavSearch() {
 function navSearch(inputClass, btnClass){
   function performSearch() {
     var query = $(inputClass).val();
-    var url = 'https://redfin-group.webflow.io/search?query=' + encodeURIComponent(query);
+    var url = '/search?query=' + encodeURIComponent(query);
     window.location.href = url;
     }
     $(btnClass).click(function() {
