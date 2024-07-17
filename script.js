@@ -223,13 +223,15 @@ mobileNavSearch();
 
 $(document).mouseup(function(e) {
   var container = $(".get-started-form-slider"); 
-  if (!container.is(e.target) && container.has(e.target).length === 0) {        
-    container.hide();
-    var closeImg = $("#close-img");
-      if (closeImg.length) {
-        closeImg.click();
-      } else {
-        console.log("#close-img element not found");
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    gsap.to(container, {
+      duration: 1,
+      x: '101vw',
+      opacity: 0,
+      onComplete: function() {
+        container.css('display', 'none');
       }
+    });
   }
 });
+
