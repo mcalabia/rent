@@ -231,7 +231,7 @@ function formSliderClose(){
 }
 
 function copyToClipboard(){
-  $('#copyButton').click(function() {
+  $('.copyButton').click(function() {
     var $linkInput = $('#linkInput');
     $linkInput.select();
     $linkInput[0].setSelectionRange(0, 99999); // For mobile devices
