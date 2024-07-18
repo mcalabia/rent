@@ -231,8 +231,8 @@ function formSliderClose(){
 }
 
 function copyToClipboard(){
-  $('.copyButton').click(function() {
-    console.log('Link copied to clipboard!');
+$('.copyButton').click(function (e) { 
+  console.log('Link copied to clipboard!');
 });
 }
 
