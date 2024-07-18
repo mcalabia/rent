@@ -214,6 +214,34 @@ function navSearch(inputClass, btnClass){
         }
     });
 }
+
+
+function formSliderClose(){
+  $(document).mouseup(function(e) {
+    var container = $(".get-started-form-slider"); 
+    if (!container.is(e.target) && container.has(e.target).length === 0) {        
+      container.css({
+        transform: 'translate3d(101vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
+        'transform-style': 'preserve-3d',
+        opacity: 0,
+        display: 'none'
+      });
+    }
+  });
+}
+
+function copyToClipboard(){
+  $('#copyButton').click(function() {
+    var $linkInput = $('#linkInput');
+    $linkInput.select();
+    $linkInput[0].setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+    alert('Link copied to clipboard!');
+});
+}
+
+copyToClipboard();
+formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
 navSearch('.navbar_search_input_mobile input', '.nav_search_btn_mobile');
 keyFeaturesMobile();
@@ -221,14 +249,7 @@ mobileNavSearch();
 
 });
 
-$(document).mouseup(function(e) {
-  var container = $(".get-started-form-slider"); 
-  if (!container.is(e.target) && container.has(e.target).length === 0) {        
-    container.css({
-      transform: 'translate3d(101vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
-      'transform-style': 'preserve-3d',
-      opacity: 0,
-      display: 'none'
-    });
-  }
-});
+
+
+
+
