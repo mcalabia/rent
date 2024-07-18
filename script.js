@@ -230,13 +230,13 @@ function formSliderClose(){
   });
 }
 
-function copyToClipboard(){
-$('.copyButton').click(function (e) { 
-  console.log('Link copied to clipboard!');
-});
-}
+// function copyToClipboard(){
+// $('.copyButton').click(function (e) { 
+//   console.log('Link copied to clipboard!');
+// });
+// }
 
-copyToClipboard();
+// copyToClipboard();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
 navSearch('.navbar_search_input_mobile input', '.nav_search_btn_mobile');
