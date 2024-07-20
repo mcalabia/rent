@@ -3,7 +3,8 @@
     top: 50%;
 }
 .param-container {
-	display: none;
+    display: none!important;
+    visibility: hidden!important;
 }
 
 .kf-stats{
