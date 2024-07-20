@@ -99,19 +99,19 @@ section.prop-fixed-scroll .pfp-item {
     
     .mktoForm input{
         color: var(--373839) !important;
-        letter-spacing: .28px;
-        border-radius: 50px;
+        letter-spacing: .28px!important;
+        border-radius: 50px!important;
         margin-bottom: 12px !important;
         padding-top: 12px !important;
         padding-bottom: 12px !important;
         padding-left: 16px !important;
         padding-right: 0 !important;
-        font-family: Inter Tight, sans-serif;
+        font-family: Inter Tight, sans-serif!important;
         line-height: 120% !important;
         width: 100% !important;
         font-size: 14px !important;
         height: auto !important;
-        border:0;
+        border:0!important;
     }
     
     .mktoHtmlText.mktoHasWidth {
@@ -125,7 +125,7 @@ section.prop-fixed-scroll .pfp-item {
         width: 100% !important;
     }
     .mktoHtmlText.mktoHasWidth p {
-        width: 100%;
+        width: 100%!important;
         color: var(--373839)!important;
     }
 
@@ -137,23 +137,23 @@ section.prop-fixed-scroll .pfp-item {
     }
 
     .mktoForm .mktoFormCol {
-        width: 100%;
+        width: 100%!important;
     }
     .mktoForm .mktoFieldWrap {
-        width: 100%;
+        width: 100%!important;
     }
 
     select#Contact_Us_Reason__c{
-        color: var(--373839);
-        letter-spacing: .28px;
-        border-radius: 50px;
-        margin-bottom: 12px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        padding-left: 16px;
-        font-family: Inter Tight, sans-serif;
-        line-height: 120%;
-        border: 0;
+        color: var(--373839)!important;
+        letter-spacing: .28px!important;
+        border-radius: 50px!important;
+        margin-bottom: 12px!important;
+        padding-top: 12px!important;
+        padding-bottom: 12px!important;
+        padding-left: 16px!important;
+        font-family: Inter Tight, sans-serif!important;
+        line-height: 120%!important;
+        border: 0!important;
         width: 100%!important;
         font-size: 14px !important;
     }
