@@ -248,6 +248,8 @@ function solutionAccordion2() {
       const allImages = self.find(".sol-acc-img.is-desktop");
       const allBody = self.find(".cl-accordion-desc");
 
+      console.log(allBody);
+
       addIndex(allItems);
       addIndex(allImages);
       addIndex(allBody);
