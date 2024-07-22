@@ -287,17 +287,33 @@ function solutionAccordion2() {
 
       allItems[0].click();
   })
+
+  function addIndex(items) {
+      items.each(function (index) {
+          const self = $(this);
+          self.data('index', index);
+      })
+  }
+
+  function resetItems(items) {
+      items.each(function () {
+          const self = $(this);
+
+          gsap.to(self, {
+              height: 0,
+              duration: 0.6,
+              ease: Power2.easeOut,
+              overwrite: true,
+              onStart: () => {
+                  gsap.set(self, {
+                      autoAlpha: 0,
+                  });
+              },
+          });
+      })
+  }
 }
 
-
-function addIndex(items) {
-  items.each(function (index) {
-      const self = $(this);
-      self.data('index', index);
-  })
-}
-
-addIndex();
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
