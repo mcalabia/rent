@@ -194,7 +194,7 @@ section.prop-fixed-scroll .pfp-item {
 
 .cl-accordion-desc.active{
     display: block !important;
-    opacity: 1;
+    opacity: 1!important;
 }
 
 .cl-accordion-desc.active{
