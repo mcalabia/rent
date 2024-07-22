@@ -289,7 +289,16 @@ function solutionAccordion2() {
   })
 }
 
-  solutionAccordion2();
+
+function addIndex(items) {
+  items.each(function (index) {
+      const self = $(this);
+      self.data('index', index);
+  })
+}
+
+addIndex();
+solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
 navSearch('.navbar_search_input_mobile input', '.nav_search_btn_mobile');
