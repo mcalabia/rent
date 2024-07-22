@@ -237,6 +237,59 @@ function formSliderClose(){
 // }
 
 // copyToClipboard();
+
+function solutionAccordion2() {
+  const containers = $(".solutions-accordion-2");
+  if (!containers.length) return;
+
+  containers.each(function () {
+      const self = $(this);
+      const allItems = self.find(".cl-accordion-data");
+      const allImages = self.find(".sol-acc-img.is-desktop");
+      const allBody = self.find(".cl-accordion-desc");
+
+      addIndex(allItems);
+      addIndex(allImages);
+
+      allItems.click(function () {
+          const subSelf = $(this);
+          const index = subSelf.data("index");
+
+          const targetImage = allImages.filter(function () {
+              return $(this).data('index') === index;
+          });
+
+          if (!subSelf.hasClass("open")) {
+              const body = subSelf.find(".cl-accordion-desc");
+
+              resetItems(allBody);
+              allItems.removeClass("open");
+
+              allImages.removeClass("active");
+              targetImage.addClass("active");
+
+              subSelf.addClass("open");
+              gsap.fromTo(body,
+                  {
+                      height: 0,
+                      autoAlpha: 0,
+                  },
+                  {
+                      height: "auto",
+                      duration: 0.6,
+                      autoAlpha: 1,
+                      ease: Power2.easeOut,
+                      overwrite: true
+                  }
+              )
+          }
+      });
+
+      allItems[0].click();
+  })
+}
+
+  solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
 navSearch('.navbar_search_input_mobile input', '.nav_search_btn_mobile');
