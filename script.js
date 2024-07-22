@@ -259,17 +259,21 @@ function solutionAccordion2() {
               return $(this).data('index') === index;
           });
 
+          const targetBody = allImages.filter(function () {
+            return $(this).data('index') === index;
+        });
+
           if (!subSelf.hasClass("open")) {
               const body = subSelf.find(".cl-accordion-desc");
 
               resetItems(allBody);
               allItems.removeClass("open");
-
               allImages.removeClass("active");
               targetImage.addClass("active");
+        
 
               subSelf.addClass("open");
-              gsap.fromTo(body,
+              gsap.fromTo(targetBody,
                   {
                       height: 0,
                       autoAlpha: 0,
