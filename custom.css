@@ -190,3 +190,13 @@ section.prop-fixed-scroll .pfp-item {
 .kf-item-mobile.open{
     border-bottom: 1px solid #000!important;
 }
+
+
+.cl-accordion-desc.active{
+    display: block !important;
+    opacity: 1;
+}
+
+.cl-accordion-desc.active{
+    transition: opacity .3s ease-in-out;
+}
