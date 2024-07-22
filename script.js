@@ -265,7 +265,7 @@ function solutionAccordion2() {
         });
 
           if (!subSelf.hasClass("open")) {
-              const body = subSelf.find(".cl-accordion-desc");
+              const body = subSelf.find(".cl-accordion-desc.is-marketing-desc2");
               allItems.removeClass("open");
               allImages.removeClass("active");
               targetImage.addClass("active");
