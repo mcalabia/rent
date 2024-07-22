@@ -250,6 +250,7 @@ function solutionAccordion2() {
 
       addIndex(allItems);
       addIndex(allImages);
+      addIndex(allBody);
 
       allItems.click(function () {
           const subSelf = $(this);
@@ -265,27 +266,12 @@ function solutionAccordion2() {
 
           if (!subSelf.hasClass("open")) {
               const body = subSelf.find(".cl-accordion-desc");
-
-              resetItems(allBody);
               allItems.removeClass("open");
               allImages.removeClass("active");
+              allBody.removeClass("active");
               targetImage.addClass("active");
-        
-
+              targetBody.addClass("active");
               subSelf.addClass("open");
-              gsap.fromTo(targetBody,
-                  {
-                      height: 0,
-                      autoAlpha: 0,
-                  },
-                  {
-                      height: "auto",
-                      duration: 0.6,
-                      autoAlpha: 1,
-                      ease: Power2.easeOut,
-                      overwrite: true
-                  }
-              )
           }
       });
 
@@ -299,23 +285,7 @@ function solutionAccordion2() {
       })
   }
 
-  function resetItems(items) {
-      items.each(function () {
-          const self = $(this);
 
-          gsap.to(self, {
-              height: 0,
-              duration: 0.6,
-              ease: Power2.easeOut,
-              overwrite: true,
-              onStart: () => {
-                  gsap.set(self, {
-                      autoAlpha: 0,
-                  });
-              },
-          });
-      })
-  }
 }
 
 solutionAccordion2();
