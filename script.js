@@ -248,8 +248,6 @@ function solutionAccordion2() {
       const allImages = self.find(".sol-acc-img.is-desktop");
       const allBody = self.find(".cl-accordion-desc");
 
-      console.log(allBody);
-
       addIndex(allItems);
       addIndex(allImages);
       addIndex(allBody);
@@ -270,10 +268,22 @@ function solutionAccordion2() {
               const body = subSelf.find(".cl-accordion-desc");
               allItems.removeClass("open");
               allImages.removeClass("active");
-              allBody.removeClass("active");
               targetImage.addClass("active");
-              targetBody.addClass("active");
+              resetItems(allBody);
               subSelf.addClass("open");
+              gsap.fromTo(targetBody,
+                {
+                    height: 0,
+                    autoAlpha: 0,
+                },
+                {
+                    height: "auto",
+                    duration: 0.6,
+                    autoAlpha: 1,
+                    ease: Power2.easeOut,
+                    overwrite: true
+                }
+            )
           }
       });
 
@@ -286,6 +296,24 @@ function solutionAccordion2() {
           self.data('index', index);
       })
   }
+
+  function resetItems(items) {
+    items.each(function () {
+        const self = $(this);
+
+        gsap.to(self, {
+            height: 0,
+            duration: 0.6,
+            ease: Power2.easeOut,
+            overwrite: true,
+            onStart: () => {
+                gsap.set(self, {
+                    autoAlpha: 0,
+                });
+            },
+        });
+    })
+}
 
 
 }
