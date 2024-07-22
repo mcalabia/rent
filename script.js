@@ -259,7 +259,7 @@ function solutionAccordion2() {
               return $(this).data('index') === index;
           });
 
-          const targetBody = allImages.filter(function () {
+          const targetBody = allBody.filter(function () {
             return $(this).data('index') === index;
         });
 
