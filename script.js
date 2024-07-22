@@ -246,7 +246,7 @@ function solutionAccordion2() {
       const self = $(this);
       const allItems = self.find(".cl-accordion-data");
       const allImages = self.find(".sol-acc-img.is-desktop");
-      const allBody = self.find(".cl-accordion-desc");
+      const allBody = self.find(".cl-accordion-desc.is-marketing-desc2");
 
       addIndex(allItems);
       addIndex(allImages);
