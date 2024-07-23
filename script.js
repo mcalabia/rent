@@ -318,6 +318,15 @@ function solutionAccordion2() {
 
 }
 
+gsap.registerPlugin(Draggable);
+
+Draggable.create(".gallery-body", {
+  type: "x",
+  bounds: "body",
+  inertia: true
+});
+
+
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
