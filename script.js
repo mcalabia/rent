@@ -316,11 +316,12 @@ function solutionAccordion2() {
 
 
 }
+
 console.log("working");
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(Draggable);
 
-  Draggable.create(".gallery-body", {
+  Draggable.create(".w-layout-blockcontainer.gallery-body.w-container", {
       type: "x",
       bounds: document.body,
       inertia: true,
