@@ -320,7 +320,7 @@ function solutionAccordion2() {
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(Draggable);
 
-  Draggable.create(".gallery-collection-top.w-dyn-items", {
+  Draggable.create(".gallery-collection-top", {
       type: "x",
       bounds: document.body,
       inertia: true,
