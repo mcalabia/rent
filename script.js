@@ -66,24 +66,6 @@ window.onload = function() {
 
 // UTM AND MARKETO
 
-$(document).ready(function () {
-  console.log("working");
-document.addEventListener("DOMContentLoaded", function() {
-  gsap.registerPlugin(Draggable);
-  Draggable.create(".gallery-body", {
-      type: "x",
-      bounds: ".gallery-container",
-      inertia: true,
-      edgeResistance: 0.8,
-      onDrag: function() {
-          console.log("dragging");
-      },
-      cursor: "grabbing"
-  });
-});
-});
-
-
 
 // Function to get a cookie by name
 function getCookie(name) {
@@ -335,6 +317,20 @@ function solutionAccordion2() {
 
 }
 
+
+  console.log("working");
+  gsap.registerPlugin(Draggable);
+
+  Draggable.create(".gallery-collection-wrapper", {
+      type: "x",
+      bounds: ".gallery-container",
+      inertia: true,
+      edgeResistance: 0.8,
+      onDrag: function() {
+          console.log("dragging");
+      },
+      cursor: "grabbing"
+  });
 
 
 solutionAccordion2();
