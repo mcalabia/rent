@@ -317,21 +317,7 @@ function solutionAccordion2() {
 
 }
 
-console.log("working");
-document.addEventListener("DOMContentLoaded", function() {
-  gsap.registerPlugin(Draggable);
 
-  Draggable.create(".gallery-body", {
-      type: "x",
-      bounds: ".gallery-container",
-      inertia: true,
-      edgeResistance: 0.8,
-      onDrag: function() {
-          console.log("dragging");
-      },
-      cursor: "grabbing"
-  });
-});
 
 solutionAccordion2();
 formSliderClose();
