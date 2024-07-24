@@ -321,9 +321,9 @@ document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(Draggable);
 
   // Initialize Draggable
-  Draggable.create(".gallery-body", {
+  Draggable.create(".gallery-collection-top", {
       type: "x",
-      bounds: ".gallery-container",
+      bounds: ".gallery-body",
       inertia: true,
       edgeResistance: 0.8,
       onDrag: function() {
