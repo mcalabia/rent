@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initialize Draggable
   Draggable.create(".gallery-body", {
       type: "x",
-      bounds: document.body,
+      bounds: ".gallery-container",
       inertia: true,
       edgeResistance: 0.8,
       onDrag: function() {
