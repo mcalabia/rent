@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Gallery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        .gallery-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-collection-wrapper {
+            display: flex;
+            width: max-content;
+            cursor: grab;
+        }
+        .gallery-item {
+            min-width: 500px; /* Adjust as needed */
+            height: 150px; /* Adjust as needed */
+            margin: 10px;
+            background: #ccc; /* For visual purposes */
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery-collection-wrapper">
+            <div class="gallery-item">Item 1</div>
+            <div class="gallery-item">Item 2</div>
+            <div class="gallery-item">Item 3</div>
+            <div class="gallery-item">Item 4</div>
+            <div class="gallery-item">Item 5</div>
+            <!-- Add more items as needed -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            gsap.registerPlugin(Draggable);
+
+            Draggable.create(".gallery-collection-wrapper", {
+                type: "x",
+                bounds: document.body,
+                inertia: true,
+                edgeResistance: 0.8,
+                onDrag: function() {
+                    // Add any additional functionality you want to trigger during dragging
+                },
+                cursor: "grabbing"
+            });
+        });
+    </script>
+</body>
+</html>
