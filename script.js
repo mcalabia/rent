@@ -1,11 +1,10 @@
+
 window.onload = function() {
     var radioButton = document.getElementById("House-Small-Complex-Condo-1-19-units");
     if (radioButton) {
         radioButton.checked = true;
     }
 };
-
-
 
 
 // UTM AND MARKETO
