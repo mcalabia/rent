@@ -316,7 +316,7 @@ function solutionAccordion2() {
 
 
 }
-
+console.log("working");
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(Draggable);
 
