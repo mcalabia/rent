@@ -190,7 +190,3 @@ section.prop-fixed-scroll .pfp-item {
 .kf-item-mobile.open{
     border-bottom: 1px solid #000!important;
 }
-
-.gallery-content img {
-    user-select: none; /* Prevent image selection */
-}
