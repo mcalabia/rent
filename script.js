@@ -320,33 +320,41 @@ function solutionAccordion2() {
 
 function galleryDrag(){
   let isDown = false;
-  let startX;
-  let scrollLeft;
+            let startX;
+            let scrollLeft;
+            let velocity = 0;
 
-  $('.gallery-body').on('mousedown', function(e) {
-      isDown = true;
-      $(this).addClass('active');
-      startX = e.pageX - $(this).offset().left;
-      scrollLeft = $(this).scrollLeft();
-  });
+            $('.gallery-body').on('mousedown', function(e) {
+                isDown = true;
+                $(this).addClass('active');
+                startX = e.pageX - $(this).offset().left;
+                scrollLeft = $(this).scrollLeft();
+            });
 
-  $('.gallery-body').on('mouseleave', function() {
-      isDown = false;
-      $(this).removeClass('active');
-  });
+            $('.gallery-body').on('mouseleave mouseup', function() {
+                isDown = false;
+                $(this).removeClass('active');
+                smoothScroll($(this));
+            });
 
-  $('.gallery-body').on('mouseup', function() {
-      isDown = false;
-      $(this).removeClass('active');
-  });
+            $('.gallery-body').on('mousemove', function(e) {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - $(this).offset().left;
+                const walk = (x - startX) * 1.5; // scroll speed adjustment
+                velocity = walk;
+                $(this).scrollLeft(scrollLeft - walk);
+            });
 
-  $('.gallery-body').on('mousemove', function(e) {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - $(this).offset().left;
-      const walk = (x - startX) * 3; //scroll-fast
-      $(this).scrollLeft(scrollLeft - walk);
-  });
+            function smoothScroll(element) {
+                if (velocity === 0) return;
+                const friction = 0.95;
+                velocity *= friction;
+                element.scrollLeft(element.scrollLeft() - velocity);
+                if (Math.abs(velocity) > 0.5) {
+                    requestAnimationFrame(() => smoothScroll(element));
+                }
+            }
 }
   
 
