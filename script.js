@@ -320,8 +320,8 @@ function solutionAccordion2() {
 console.log("working");
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(Draggable);
-
-  Draggable.create(".w-layout-blockcontainer.gallery-body.w-container", {
+  console.log("grab");
+  Draggable.create("img.image-300", {
       type: "x",
       bounds: document.body,
       inertia: true,
