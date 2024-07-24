@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Draggable Gallery</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
+    
     <style>
         body {
             overflow: hidden;
@@ -39,12 +38,14 @@
             <!-- Add more items as needed -->
         </div>
     </div>
-
+    <script src="https://rcuerbaunfire.github.io/redfin-group-rent/vendor/gsap.min.js"></script>
+    <script src="https://mcalabia.github.io/rent/draggable.js"></script>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             gsap.registerPlugin(Draggable);
 
-            Draggable.create(".gallery-collection-top", {
+            Draggable.create(".gallery-collection-wrapper", {
                 type: "x",
                 bounds: document.body,
                 inertia: true,
@@ -56,5 +57,7 @@
             });
         });
     </script>
+
+    
 </body>
 </html>

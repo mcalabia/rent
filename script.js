@@ -317,7 +317,20 @@ function solutionAccordion2() {
 
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(Draggable);
 
+  Draggable.create(".gallery-collection-top.w-dyn-items", {
+      type: "x",
+      bounds: document.body,
+      inertia: true,
+      edgeResistance: 0.8,
+      onDrag: function() {
+          console.log("dragging");
+      },
+      cursor: "grabbing"
+  });
+});
 
 solutionAccordion2();
 formSliderClose();
