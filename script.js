@@ -318,14 +318,39 @@ function solutionAccordion2() {
 
 }
 
-$(function() {
-  $(".gallery-body").draggable({
-      axis: "x",
-      cursor: "grab"
+function galleryDrag(){
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  $('.gallery-body').on('mousedown', function(e) {
+      isDown = true;
+      $(this).addClass('active');
+      startX = e.pageX - $(this).offset().left;
+      scrollLeft = $(this).scrollLeft();
   });
-});
 
+  $('.gallery-body').on('mouseleave', function() {
+      isDown = false;
+      $(this).removeClass('active');
+  });
 
+  $('.gallery-body').on('mouseup', function() {
+      isDown = false;
+      $(this).removeClass('active');
+  });
+
+  $('.gallery-body').on('mousemove', function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - $(this).offset().left;
+      const walk = (x - startX) * 3; //scroll-fast
+      $(this).scrollLeft(scrollLeft - walk);
+  });
+}
+  
+
+galleryDrag();
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
