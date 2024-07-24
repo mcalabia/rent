@@ -317,47 +317,21 @@ function solutionAccordion2() {
 
 }
 
-function galleryDrag(){
-  let isDown = false;
-            let startX;
-            let scrollLeft;
-            let velocity = 0;
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(Draggable);
 
-            $('.gallery-body').on('mousedown', function(e) {
-                isDown = true;
-                $(this).addClass('active');
-                startX = e.pageX - $(this).offset().left;
-                scrollLeft = $(this).scrollLeft();
-            });
+  // Initialize Draggable
+  Draggable.create(".gallery-body", {
+      type: "x",
+      bounds: document.body,
+      inertia: true,
+      edgeResistance: 0.8,
+      onDrag: function() {
+          // Add any additional functionality you want to trigger during dragging
+      }
+  });
+});
 
-            $('.gallery-body').on('mouseleave mouseup', function() {
-                isDown = false;
-                $(this).removeClass('active');
-                smoothScroll($(this));
-            });
-
-            $('.gallery-body').on('mousemove', function(e) {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - $(this).offset().left;
-                const walk = (x - startX) * 1.5; // scroll speed adjustment
-                velocity = walk;
-                $(this).scrollLeft(scrollLeft - walk);
-            });
-
-            function smoothScroll(element) {
-                if (velocity === 0) return;
-                const friction = 0.95;
-                velocity *= friction;
-                element.scrollLeft(element.scrollLeft() - velocity);
-                if (Math.abs(velocity) > 0.5) {
-                    requestAnimationFrame(() => smoothScroll(element));
-                }
-            }
-}
-  
-
-galleryDrag();
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
