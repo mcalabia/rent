@@ -318,12 +318,11 @@ function solutionAccordion2() {
 
 }
 
-gsap.registerPlugin(Draggable);
-
-Draggable.create(".gallery-body", {
-  type: "x",
-  bounds: "body",
-  inertia: true
+$(function() {
+  $(".gallery-body").draggable({
+      axis: "x",
+      cursor: "grab"
+  });
 });
 
 
