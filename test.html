@@ -44,13 +44,13 @@
         document.addEventListener("DOMContentLoaded", function() {
             gsap.registerPlugin(Draggable);
 
-            Draggable.create(".gallery-collection-wrapper", {
+            Draggable.create(".gallery-collection-top", {
                 type: "x",
                 bounds: document.body,
                 inertia: true,
                 edgeResistance: 0.8,
                 onDrag: function() {
-                    // Add any additional functionality you want to trigger during dragging
+                    console.log("dragging");
                 },
                 cursor: "grabbing"
             });
