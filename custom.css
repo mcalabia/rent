@@ -198,7 +198,7 @@ width: 100%;
 }
 .templates-carousel .owl-item.center .tmpl-content {
 opacity: 1!important;
-transform: scale(1.1); /* Slightly zoom in the center image */
+transform: scale(1); /* Slightly zoom in the center image */
 }
 .templates-carousel .owl-item .tmpl-content {
 opacity: 0.5!important;
