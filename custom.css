@@ -245,6 +245,12 @@ overflow: hidden;
 .templates-carousel.owl-carousel{
 display: block;
 }
+
+.templates-carousel .owl-nav, .templates-carousel.owl-dots {
+    width: 100%;
+    height: 100%;
+    position: static!important;
+}
 /* TEMPLATE CAROUSEL */
 
 .kf-item-mobile.open .is-kf-mobile {
