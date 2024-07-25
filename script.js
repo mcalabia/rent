@@ -343,7 +343,7 @@ function solutionAccordion2() {
   // Add 'center' class to the middle item
   function updateCenterClass() {
   $('.templates-carousel .owl-item').removeClass('center');
-  $('.templates-carousel .owl-item.active').first().next().addClass('center');
+  $('.templates-carousel .owl-item.active').first().addClass('center');
   }
 
   // Initial call
