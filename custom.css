@@ -181,6 +181,10 @@ section.prop-fixed-scroll .pfp-item {
 
 
 /* TEMPLATE CAROUSEL */
+
+.templates-carousel .owl-carousel{
+    display: block;
+}
 .templates-carousel .tmpl-item .tmpl-content {
   width: 100%;
   height: auto;
