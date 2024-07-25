@@ -342,8 +342,8 @@ function solutionAccordion2() {
   });
   // Add 'center' class to the middle item
   function updateCenterClass() {
-  $('.owl-item').removeClass('center');
-  $('.owl-item.active').first().next().addClass('center');
+  $('.templates-carousel .owl-item').removeClass('center');
+  $('.templates-carousel .owl-item.active').first().next().addClass('center');
   }
 
   // Initial call
