@@ -181,7 +181,7 @@ section.prop-fixed-scroll .pfp-item {
 
 
 /* TEMPLATE CAROUSEL */
-.templates-carousel .item img {
+.templates-carousel .item {
     width: 100%;
     height: auto;
     margin: 0 20px;
@@ -190,17 +190,17 @@ section.prop-fixed-scroll .pfp-item {
     max-width: 800px;
   }
   
-  .templates-carousel .owl-item.center .item img {
+  .templates-carousel .owl-item.center .item {
     opacity: 1!important;
     transform: scale(1.1); /* Slightly zoom in the center image */
   }
   
-  .templates-carousel .owl-item .item img {
+  .templates-carousel .owl-item .item {
     opacity: 0.5!important;
   }
   
-  .templates-carousel .owl-item.prev .item img,
-  .templates-carousel .owl-item.next .item img {
+  .templates-carousel .owl-item.prev .item,
+  .templates-carousel .owl-item.next .item {
     opacity: 1!important;
   }
   
