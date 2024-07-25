@@ -350,7 +350,7 @@ function solutionAccordion2() {
   updateCenterClass();
 
   // Update center class on 'changed.owl.carousel' event
-  $('.owl-carousel').on('changed.owl.carousel', function(event) {
+  $('.templates-carousel').on('changed.owl.carousel', function(event) {
   updateCenterClass();
   });
 
