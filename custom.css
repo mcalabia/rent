@@ -181,27 +181,7 @@ section.prop-fixed-scroll .pfp-item {
 
 
 /* TEMPLATE CAROUSEL */
-.templates-carousel .item {
-    height: auto;
-    margin: 0 20px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    width: 70vw;
-    max-width: 800px;
-  }
-  
-  .templates-carousel .owl-item.center .item {
-    opacity: 1!important;
-    transform: scale(1.1); /* Slightly zoom in the center image */
-  }
-  
-  .templates-carousel .owl-item .item {
-    opacity: 0.5!important;
-  }
-  
-  .templates-carousel .owl-item.prev .item,
-  .templates-carousel .owl-item.next .item {
-    opacity: 1!important;
-  }
+
   
   .templates-carousel .owl-prev, .templates-carousel .owl-next {
     position: absolute;
