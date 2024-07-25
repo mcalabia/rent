@@ -187,12 +187,11 @@ section.prop-fixed-scroll .pfp-item {
     width: 100%;
 }
 .templates-carousel .tmpl-content {
-/* width: 100%; */
+
 height: auto;
 margin: 0 20px;
 transition: opacity 0.5s ease, transform 0.5s ease;
-width: 70vw!important;
-/* max-width: 800px; */
+
 }
 .templates-carousel img{
 width: 100%;
