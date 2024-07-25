@@ -330,7 +330,7 @@ function solutionAccordion2() {
 
 
 
- function templatesCarousel(){
+
     $(".templates-carousel").owlCarousel({
       items: 3,
       loop: true,
@@ -353,12 +353,7 @@ function solutionAccordion2() {
   $('.owl-carousel').on('changed.owl.carousel', function(event) {
   updateCenterClass();
   });
- }
 
-
-
-
-templatesCarousel();
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
