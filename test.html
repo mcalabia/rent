@@ -3,62 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draggable Gallery</title>
-    
-    <style>
-        body {
-            overflow: hidden;
-        }
-        .gallery-container {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-        .gallery-collection-wrapper {
-            display: flex;
-            width: max-content;
-            cursor: grab;
-        }
-        .gallery-item {
-            min-width: 500px; /* Adjust as needed */
-            height: 150px; /* Adjust as needed */
-            margin: 10px;
-            background: #ccc; /* For visual purposes */
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<style>
+    .owl-carousel{
+        width: 100%;
+    }
+
+.owl-carousel .item img {
+  width: 100%;
+  height: auto;
+  margin: 0 20px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 70vw;
+  max-width: 800px;
+}
+
+.owl-item.center .item img {
+  opacity: 1!important;
+  transform: scale(1.1); /* Slightly zoom in the center image */
+}
+
+.owl-item .item img {
+  opacity: 0.5!important;
+}
+
+.owl-item.prev .item img,
+.owl-item.next .item img {
+  opacity: 1!important;
+}
+
+.owl-prev, .owl-next {
+  position: absolute;
+  top: calc(50% - 40px);
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-size: contain!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  cursor: pointer!important;
+}
+
+.owl-prev {
+  left: 10px;
+  background-image: url('/arrow-left.svg')!important; /* Update the path */
+}
+
+.owl-next {
+  right: 10px;
+  background-image: url('/arrow-right.svg')!important; /* Update the path */
+}
+
+
+
+</style>
 </head>
 <body>
-    <div class="gallery-container">
-        <div class="gallery-collection-wrapper">
-            <div class="gallery-item">Item 1</div>
-            <div class="gallery-item">Item 2</div>
-            <div class="gallery-item">Item 3</div>
-            <div class="gallery-item">Item 4</div>
-            <div class="gallery-item">Item 5</div>
-            <!-- Add more items as needed -->
-        </div>
-    </div>
+    <div class="owl-carousel">
+        <div class="item"><img src="1.png" alt="Image 1"></div>
+        <div class="item"><img src="2.png" alt="Image 2"></div>
+        <div class="item"><img src="3.png" alt="Image 3"></div>
+        <div class="item"><img src="3.png" alt="Image 3"></div>
+        <div class="item"><img src="3.png" alt="Image 3"></div>
+      </div>
     
-    
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            gsap.registerPlugin(Draggable);
 
-            Draggable.create(".gallery-collection-wrapper", {
-                type: "x",
-                bounds: ".gallery-container",
-                inertia: true,
-                edgeResistance: 0.8,
-                onDrag: function() {
-                    console.log("dragging");
-                },
-                cursor: "grabbing"
-            });
-        });
-    </script>
-<script src="https://rcuerbaunfire.github.io/redfin-group-rent/vendor/gsap.min.js"></script>
-<script src="https://mcalabia.github.io/rent/draggable.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+        items: 3,
+        loop: true,
+        margin: 10,
+        center: true,
+        nav: true,
+        navText: ["", ""],
+        autoWidth: true
+    });
+
+
+
+  // Add 'center' class to the middle item
+  function updateCenterClass() {
+    $('.owl-item').removeClass('center');
+    $('.owl-item.active').first().next().addClass('center');
+  }
+
+  // Initial call
+  updateCenterClass();
+
+  // Update center class on 'changed.owl.carousel' event
+  $('.owl-carousel').on('changed.owl.carousel', function(event) {
+    updateCenterClass();
+  });
+  
+});
+
+      </script>
 </body>
 </html>

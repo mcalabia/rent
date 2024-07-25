@@ -313,12 +313,7 @@ function solutionAccordion2() {
         });
     })
 }
-
-
 }
-
-
-  console.log("working");
   gsap.registerPlugin(Draggable);
 
   Draggable.create(".gallery-collection-wrapper", {
@@ -333,6 +328,37 @@ function solutionAccordion2() {
   });
 
 
+
+
+ function templatesCarousel(){
+    $(".templates-carousel").owlCarousel({
+      items: 3,
+      loop: true,
+      margin: 10,
+      center: true,
+      nav: true,
+      navText: ["", ""],
+      autoWidth: true
+  });
+  // Add 'center' class to the middle item
+  function updateCenterClass() {
+  $('.owl-item').removeClass('center');
+  $('.owl-item.active').first().next().addClass('center');
+  }
+
+  // Initial call
+  updateCenterClass();
+
+  // Update center class on 'changed.owl.carousel' event
+  $('.owl-carousel').on('changed.owl.carousel', function(event) {
+  updateCenterClass();
+  });
+ }
+
+
+
+
+templatesCarousel();
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');

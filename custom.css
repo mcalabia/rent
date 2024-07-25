@@ -179,6 +179,54 @@ section.prop-fixed-scroll .pfp-item {
     }
 /* MARKETO FORM DESIGN */
 
+
+/* TEMPLATE CAROUSEL */
+.templates-carousel .item img {
+    width: 100%;
+    height: auto;
+    margin: 0 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 70vw;
+    max-width: 800px;
+  }
+  
+  .templates-carousel .owl-item.center .item img {
+    opacity: 1!important;
+    transform: scale(1.1); /* Slightly zoom in the center image */
+  }
+  
+  .templates-carousel .owl-item .item img {
+    opacity: 0.5!important;
+  }
+  
+  .templates-carousel .owl-item.prev .item img,
+  .templates-carousel .owl-item.next .item img {
+    opacity: 1!important;
+  }
+  
+  .templates-carousel .owl-prev, .templates-carousel .owl-next {
+    position: absolute;
+    top: calc(50% - 40px);
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    cursor: pointer!important;
+  }
+  
+  .templates-carousel .owl-prev {
+    left: 10px;
+    background-image: url('/arrow-left.svg')!important; /* Update the path */
+  }
+  
+  .templates-carousel .owl-next {
+    right: 10px;
+    background-image: url('/arrow-right.svg')!important; /* Update the path */
+  }
+/* TEMPLATE CAROUSEL */
+
 .kf-item-mobile.open .is-kf-mobile {
     display: block !important;
 }
@@ -190,3 +238,4 @@ section.prop-fixed-scroll .pfp-item {
 .kf-item-mobile.open{
     border-bottom: 1px solid #000!important;
 }
+
