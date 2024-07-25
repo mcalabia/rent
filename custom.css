@@ -181,7 +181,7 @@ section.prop-fixed-scroll .pfp-item {
 
 
 /* TEMPLATE CAROUSEL */
-.templates-carousel .item .tmpl-content {
+.templates-carousel .tmpl-item .tmpl-content {
   width: 100%;
   height: auto;
   margin: 0 20px;
@@ -190,17 +190,17 @@ section.prop-fixed-scroll .pfp-item {
   max-width: 800px;
 }
 
-.templates-carousel .owl-item.center .item .tmpl-content {
+.templates-carousel .owl-item.center .tmpl-item .tmpl-content {
   opacity: 1!important;
   transform: scale(1.1); /* Slightly zoom in the center image */
 }
 
-.templates-carousel .owl-item .item .tmpl-content {
+.templates-carousel .owl-item .tmpl-item .tmpl-content {
   opacity: 0.5!important;
 }
 
-.templates-carousel .owl-item.prev .item .tmpl-content,
-.templates-carousel .owl-item.next .item .tmpl-content {
+.templates-carousel .owl-item.prev .tmpl-item .tmpl-content,
+.templates-carousel .owl-item.next .tmpl-item .tmpl-content {
   opacity: 1!important;
 }
 
