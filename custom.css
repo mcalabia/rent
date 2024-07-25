@@ -211,7 +211,7 @@ opacity: 1!important;
 
 .templates-carousel .owl-prev, .templates-carousel .owl-next {
 position: absolute!important;
-top: calc(50% - 40px)!important;
+top: 50%!important;
 transform: translateY(-50%)!important;
 width: 40px!important;
 height: 40px!important;
