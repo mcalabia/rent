@@ -180,42 +180,43 @@ section.prop-fixed-scroll .pfp-item {
 /* MARKETO FORM DESIGN */
 
 
-/* TEMPLATE CAROUSEL */ 
-.templates-carousel .tmpl-item {
-    height: auto;
-    margin: 0 20px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    width: 70vw;
-    max-width: 800px;
-  }
-  
-  .templates-carousel .owl-item.center .tmpl-item {
-    opacity: 1!important;
-    transform: scale(1.1); /* Slightly zoom in the center image */
-  }
-  
-  .templates-carousel .owl-item .tmpl-item {
-    opacity: 0.5!important;
-  }
-  
-  .templates-carousel .owl-item.prev .tmpl-item,
-  .templates-carousel .owl-item.next .tmpl-item {
-    opacity: 1!important;
-  }
-  
-  .templates-carousel .owl-prev, .templates-carousel .owl-next {
-    position: absolute;
-    top: calc(50% - 40px);
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-size: contain!important;
-    background-repeat: no-repeat!important;
-    background-position: center!important;
-    cursor: pointer!important;
-  }
-  
-  .templates-carousel .owl-prev {
+/* TEMPLATE CAROUSEL */
+.templates-carousel .item .tmpl-content {
+  width: 100%;
+  height: auto;
+  margin: 0 20px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 70vw;
+  max-width: 800px;
+}
+
+.templates-carousel .owl-item.center .item .tmpl-content {
+  opacity: 1!important;
+  transform: scale(1.1); /* Slightly zoom in the center image */
+}
+
+.templates-carousel .owl-item .item .tmpl-content {
+  opacity: 0.5!important;
+}
+
+.templates-carousel .owl-item.prev .item .tmpl-content,
+.templates-carousel .owl-item.next .item .tmpl-content {
+  opacity: 1!important;
+}
+
+.templates-carousel .owl-prev, .templates-carousel .owl-next {
+  position: absolute;
+  top: calc(50% - 40px);
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-size: contain!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  cursor: pointer!important;
+}
+
+.templates-carousel .owl-prev {
     left: 10px;
     background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66a2c184ca2c5560236f9e52_arrow-left.svg')!important; /* Update the path */
   }
