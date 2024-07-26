@@ -213,14 +213,15 @@ opacity: 1!important;
 position: absolute!important;
 top: 50%!important;
 transform: translateY(-50%)!important;
-width: 40px!important;
-height: 40px!important;
+width: 72px!important;
+height: 72px!important;
 background-size: contain!important;
 background-repeat: no-repeat!important;
 background-position: center!important;
 cursor: pointer!important;
 border: 0px;
 background-color: transparent;
+margin: 0 5%;
 }
 .templates-carousel .owl-prev {
 left: 10px;
