@@ -230,6 +230,9 @@ margin: 0 5%;
         width: 40px!important;
         height: 40px!important;
     }   
+    .templates-carousel .tmpl-content {
+        width: 90vw!important;
+    }
 }
 
 .templates-carousel .owl-prev {
