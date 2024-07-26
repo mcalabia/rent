@@ -227,7 +227,9 @@ margin: 0 5%;
 @media only screen and (max-width: 767px) {
     .templates-carousel .owl-prev, .templates-carousel .owl-next {
         margin: 0;
-    }
+        width: 40px!important;
+        height: 40px!important;
+    }   
 }
 
 .templates-carousel .owl-prev {
