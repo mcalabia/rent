@@ -223,6 +223,13 @@ border: 0px;
 background-color: transparent;
 margin: 0 5%;
 }
+
+@media only screen and (max-width: 767px) {
+    .templates-carousel .owl-prev, .templates-carousel .owl-next {
+        margin: 0;
+    }
+}
+
 .templates-carousel .owl-prev {
 left: 10px;
 background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66a2c184ca2c5560236f9e52_arrow-left.svg')!important; /* Update the path */
