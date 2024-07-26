@@ -278,3 +278,9 @@ display: block;
     border-bottom: 1px solid #000!important;
 }
 
+.content-carousel-w-icons .owl-item.active{
+    opacity: 1;
+}
+.content-carousel-w-icons .owl-item{
+    opacity: 0.5;
+}  
