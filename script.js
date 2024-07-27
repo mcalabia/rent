@@ -354,6 +354,20 @@ function solutionAccordion2() {
   updateCenterClass();
   });
 
+
+
+
+    // Function to get query parameter value by name
+    function getQueryParam(name) {
+        let urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+    let query = getQueryParam('query');
+    let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
+    $('.search-result-text').text(`Search results for “${decodedQuery}”`);
+
+
+
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
