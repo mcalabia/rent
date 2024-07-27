@@ -366,14 +366,16 @@ let query = getQueryParam('query');
 console.log(query);
 
 let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
-console.log(decodedQuery);
+
 
 if (decodedQuery) {
   $('.search-result-text')
       .text(`Search results for “${decodedQuery}”`)
       .css('display', 'block');
+      console.log(decodedQuery);
 } else {
   $('.search-result-text').css('display', 'none');
+  console.log("ayaw");
 }
 
 
