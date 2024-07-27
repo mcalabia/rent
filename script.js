@@ -368,7 +368,7 @@ console.log(query);
 let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
 
 
-if (decodedQuery) {
+if (decodedQuery !== "" || decodedQuery !== null) {
   $('.search-result-text')
       .text(`Search results for “${decodedQuery}”`)
       .css('display', 'block');
