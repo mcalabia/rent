@@ -370,7 +370,7 @@ let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
 
 if (decodedQuery !== "" || decodedQuery !== null) {
   $('.search-result-text')
-      .text(`Search results for “${decodedQuery}”`)
+      .text('Search results for “'+decodedQuery+'”')
       .css('display', 'block!important');
       console.log(decodedQuery);
 } else {
