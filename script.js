@@ -357,16 +357,21 @@ function solutionAccordion2() {
 
 
 
-    // Function to get query parameter value by name
-    function getQueryParam(name) {
-        let urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(name);
-    }
-    let query = getQueryParam('query');
-    let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
-    $('.search-result-text')
-    .text(`Search results for “${decodedQuery}”`)
-    .css('display', 'block');
+// Function to get query parameter value by name
+function getQueryParam(name) {
+  let urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+let query = getQueryParam('query');
+console.log(query);
+let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
+if (decodedQuery) {
+  $('.search-result-text')
+      .text(`Search results for “${decodedQuery}”`)
+      .css('display', 'block');
+} else {
+  $('.search-result-text').css('display', 'none');
+}
 
 
 
