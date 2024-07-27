@@ -364,7 +364,9 @@ function solutionAccordion2() {
     }
     let query = getQueryParam('query');
     let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
-    $('.search-result-text').text(`Search results for “${decodedQuery}”`);
+    $('.search-result-text')
+    .text(`Search results for “${decodedQuery}”`)
+    .css('display', 'block');
 
 
 
