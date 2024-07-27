@@ -368,11 +368,9 @@ console.log(query);
 let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
 
 
-if (decodedQuery) {
+if (decodedQuery && decodedQuery.trim() !== '') {
   $('.search-result-text').text('Search results for “'+decodedQuery+'”');
   $('.search-result-text').css("display", "block");
-
-      console.log(decodedQuery);
 } else {
   $('.search-result-text').css('display', 'none');
   console.log("ayaw");
