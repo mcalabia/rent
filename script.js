@@ -367,14 +367,16 @@ console.log(query);
 
 let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
 
-
-if (decodedQuery && decodedQuery.trim() !== '') {
-  $('.search-result-text').text('Search results for “'+decodedQuery+'”');
-  $('.search-result-text').css("display", "block");
-} else {
-  $('.search-result-text').css('display', 'none');
-  console.log("ayaw");
+if(query){
+  if (decodedQuery && decodedQuery.trim() !== '') {
+    $('.search-result-text').text('Search results for “'+decodedQuery+'”');
+    $('.search-result-text').css("display", "block");
+  } else {
+    $('.search-result-text').css('display', 'none');
+    console.log("ayaw");
+  }
 }
+
 
 
 
