@@ -377,9 +377,9 @@ if(query){
   }
 }
 
-function highlightText(container) {
+function highlightText(container, className) {
   // Get the text from the elements within the container
-  var title = $(container).find('.cp-link-text').text();
+  var title = $(container).find(className).text();
   var highlighted = $(container).find('.highlighted-text').text().trim();
   // Only run the replacement if highlighted text is not empty
   if (highlighted) {
@@ -390,7 +390,8 @@ function highlightText(container) {
 }
 
 $('.nav-dd-list-container .w-dyn-item').each(function() {
-  highlightText(this);
+  highlightText(this, '.cp-link-text');
+  highlightText(this, '.cp-card-title');
 });
 
 
