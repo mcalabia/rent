@@ -384,7 +384,7 @@ function highlightText(container, className) {
   // Only run the replacement if highlighted text is not empty
   if (highlighted) {
   var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
-  $(container).find('.cp-link-text').html(output);
+  $(container).find(className).html(output);
   console.log(output);
   }
 }
