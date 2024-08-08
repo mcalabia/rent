@@ -381,8 +381,6 @@ function highlightText(container) {
   // Get the text from the elements within the container
   var title = $(container).find('.cp-link-text').text();
   var highlighted = $(container).find('.highlighted-text').text().trim();
-  console.log(title+" and "+highlighted);
-
   // Only run the replacement if highlighted text is not empty
   if (highlighted) {
   var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
