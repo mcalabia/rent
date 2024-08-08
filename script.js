@@ -387,6 +387,7 @@ function highlightText(container) {
 
   // Update the content of the title element
   $(container).find('.cp-link-text').html(output);
+  console.log(output);
 }
 
 // Loop through each .nav-dd-list-container and apply the function
