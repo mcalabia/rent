@@ -391,7 +391,7 @@ function highlightText(container) {
 }
 
 // Loop through each .nav-dd-list-container and apply the function
-$('.nav-dd-list-container .listitem').each(function() {
+$('.nav-dd-list-container .w-dyn-item').each(function() {
   highlightText(this);
 });
 
