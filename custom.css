@@ -284,11 +284,17 @@ display: block;
 .content-carousel-w-icons .owl-item{
     opacity: 0.5;
 }  
-.nav-dd-list-container code {
+.nav-dd-list-container .res-links code {
     color: var(--indigo-400)!important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: Inter, sans-serif !important;
     font-size: 16px;
 }
+
+.nav-dd-list-container .collection-list-20 code {
+    color: var(--indigo-400)!important;
+    font-family: 'Rent'!important;
+}
+
 
 .nav-dd-list-container .rent-title-w-highlight p{
     margin: 0;
