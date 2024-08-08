@@ -394,7 +394,7 @@ $('.nav-dd-list-container .collection-list-20 .w-dyn-item').each(function() {
 });
 
 $('.nav-dd-list-container .res-links .w-dyn-item').each(function() {
-  highlightText(this, '.cp-card-title');
+  highlightText(this, '.cp-card-title.is-res');
 });
 
 

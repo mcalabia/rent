@@ -284,8 +284,9 @@ display: block;
 .content-carousel-w-icons .owl-item{
     opacity: 0.5;
 }  
-code {
+.nav-dd-list-container code {
     color: var(--indigo-400)!important;
+    font-family: 'Rentsans'!important;
 }
 
 .nav-dd-list-container .rent-title-w-highlight p{
