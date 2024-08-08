@@ -287,3 +287,8 @@ display: block;
 code {
     color: var(--indigo-400)!important;
 }
+
+.nav-dd-list-container .rent-title-w-highlight p{
+    margin: 0;
+    padding: 0;
+}
