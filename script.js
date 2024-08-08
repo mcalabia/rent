@@ -397,7 +397,9 @@ $('.nav-dd-list-container .res-links .w-dyn-item').each(function() {
   highlightText(this, '.cp-card-title.is-res');
 });
 
-
+$('.nav-dd-list-container .pr-links .pr-link-block').each(function() {
+  highlightText(this, '.rent-title-w-highlight');
+});
 
 solutionAccordion2();
 formSliderClose();
