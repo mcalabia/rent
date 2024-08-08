@@ -377,9 +377,22 @@ if(query){
   }
 }
 
+function highlightText(titleSelector, highlightedSelector) {
+  // Get the text from the elements
+  var title = $(titleSelector).text();
+  var highlighted = $(highlightedSelector).text();
 
+  // Replace the highlighted text with <code>highlighted</code>
+  var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
 
+  // Update the content of the title element
+  $(titleSelector).html(output);
 
+  console.log(output); // For debugging purposes
+}
+
+// Call the function with the appropriate selectors
+highlightText('.nav-dd-list-container .cp-link-text', '.nav-dd-list-container .highlighted-text');
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
