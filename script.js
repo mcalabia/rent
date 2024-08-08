@@ -401,6 +401,12 @@ $('.nav-dd-list-container .pr-links .pr-link-block').each(function() {
   highlightText(this, '.rent-title-w-highlight');
 });
 
+
+$('.navbar_mob_dd_body .pr-links .pr-link-block').each(function() {
+  highlightText(this, '.rent-title-w-highlight');
+});
+
+
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
