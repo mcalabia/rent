@@ -402,6 +402,14 @@ $('.nav-dd-list-container .pr-links .pr-link-block').each(function() {
 });
 
 
+$('.navbar_mob_dd_body .collection-list-20 .w-dyn-item').each(function() {
+  highlightText(this, '.cp-link-text');
+});
+
+$('.navbar_mob_dd_body .res-links .w-dyn-item').each(function() {
+  highlightText(this, '.cp-card-title.is-res');
+});
+
 $('.navbar_mob_dd_body .pr-links .pr-link-block').each(function() {
   highlightText(this, '.rent-title-w-highlight');
 });
