@@ -380,13 +380,11 @@ if(query){
 function highlightText(container) {
   // Get the text from the elements within the container
   var title = $(container).find('.cp-link-text').text();
-  var highlighted = $(container).find('.highlighted-text').text();
+  var highlighted = $(container).find('.highlighted-text').text().trim();
   console.log(title+" and "+highlighted);
 
-  var highlightedText = highlighted.text().trim(); // Trim to remove any leading/trailing whitespace
-
   // Only run the replacement if highlighted text is not empty
-  if (highlightedText) {
+  if (highlighted) {
   var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
   $(container).find('.cp-link-text').html(output);
   console.log(output);
