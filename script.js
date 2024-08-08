@@ -383,15 +383,16 @@ function highlightText(container) {
   var highlighted = $(container).find('.highlighted-text').text();
   console.log(title+" and "+highlighted);
 
-  // Replace the highlighted text with <code>highlighted</code>
-  var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
+  var highlightedText = highlighted.text().trim(); // Trim to remove any leading/trailing whitespace
 
-  // Update the content of the title element
+  // Only run the replacement if highlighted text is not empty
+  if (highlightedText) {
+  var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
   $(container).find('.cp-link-text').html(output);
   console.log(output);
+  }
 }
 
-// Loop through each .nav-dd-list-container and apply the function
 $('.nav-dd-list-container .w-dyn-item').each(function() {
   highlightText(this);
 });
