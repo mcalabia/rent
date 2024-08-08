@@ -390,7 +390,7 @@ function highlightText(container) {
 }
 
 // Loop through each .nav-dd-list-container and apply the function
-$('.nav-dd-list-container').each(function() {
+$('.nav-dd-list-container .listitem').each(function() {
   highlightText(this);
 });
 
