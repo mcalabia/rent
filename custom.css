@@ -284,3 +284,6 @@ display: block;
 .content-carousel-w-icons .owl-item{
     opacity: 0.5;
 }  
+code {
+    color: var(--indigo-400)!important;
+}
