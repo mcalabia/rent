@@ -377,22 +377,24 @@ if(query){
   }
 }
 
-function highlightText(titleSelector, highlightedSelector) {
-  // Get the text from the elements
-  var title = $(titleSelector).text();
-  var highlighted = $(highlightedSelector).text();
+function highlightText(container) {
+  // Get the text from the elements within the container
+  var title = $(container).find('.cp-link-text').text();
+  var highlighted = $(container).find('.highlighted-text').text();
 
   // Replace the highlighted text with <code>highlighted</code>
   var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
 
   // Update the content of the title element
-  $(titleSelector).html(output);
-
-  console.log(output); // For debugging purposes
+  $(container).find('.cp-link-text').html(output);
 }
 
-// Call the function with the appropriate selectors
-highlightText('.nav-dd-list-container .cp-link-text', '.nav-dd-list-container .highlighted-text');
+// Loop through each .nav-dd-list-container and apply the function
+$('.nav-dd-list-container').each(function() {
+  highlightText(this);
+});
+
+
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
