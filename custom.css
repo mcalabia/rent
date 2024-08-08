@@ -286,7 +286,8 @@ display: block;
 }  
 .nav-dd-list-container code {
     color: var(--indigo-400)!important;
-    font-family: 'Rentsans'!important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px;
 }
 
 .nav-dd-list-container .rent-title-w-highlight p{
