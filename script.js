@@ -324,7 +324,7 @@ function solutionAccordion2() {
       inertia: true,
       edgeResistance: 0.8,
       onDrag: function() {
-          console.log("dragging");
+          // console.log("dragging");
       },
       cursor: "grabbing"
   });
@@ -361,7 +361,7 @@ function getQueryParam(name) {
   return urlParams.get(name);
 }
 let query = getQueryParam('query');
-console.log(query);
+// console.log(query);
 
 let decodedQuery = decodeURIComponent(query).replace(/\+/g, ' ');
 
@@ -371,7 +371,7 @@ if(query){
     $('.search-result-text').css("display", "block");
   } else {
     $('.search-result-text').css('display', 'none');
-    console.log("ayaw");
+    // console.log("ayaw");
   }
 }
 
@@ -383,7 +383,7 @@ function highlightText(container, className) {
   if (highlighted) {
   var output = title.replace(new RegExp(highlighted, 'g'), `<code>${highlighted}</code>`);
   $(container).find(className).html(output);
-  console.log(output);
+  // console.log(output);
   }
 }
 
