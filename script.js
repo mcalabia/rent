@@ -314,6 +314,8 @@ function solutionAccordion2() {
     })
 }
 }
+
+
   gsap.registerPlugin(Draggable);
 
   Draggable.create(".gallery-collection-wrapper", {
@@ -324,12 +326,18 @@ function solutionAccordion2() {
       onDrag: function() {
           console.log("dragging");
       },
+      onDragEnd: function() {
+        // Reset position to the beginning or end based on direction
+        const maxScrollX = galleryWrapper.scrollWidth / 2;
+        const currentX = galleryWrapper.scrollLeft;
+        if (currentX >= maxScrollX) {
+            galleryWrapper.scrollLeft = 0;
+        } else if (currentX <= 0) {
+            galleryWrapper.scrollLeft = maxScrollX;
+        }
+    },
       cursor: "grabbing"
   });
-
-
-
-
 
     $(".templates-carousel").owlCarousel({
       items: 3,
