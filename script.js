@@ -316,17 +316,25 @@ function solutionAccordion2() {
 }
 
 
-  gsap.registerPlugin(Draggable);
+gsap.registerPlugin(Draggable);
 
-  Draggable.create(".gallery-collection-wrapper", {
-      type: "x",
-      bounds: ".gallery-container",
-      inertia: true,
-      edgeResistance: 0.8,
-      onDrag: function() {
-          console.log("dragging");
-      },
-      onDragEnd: function() {
+const galleryWrapper = document.querySelector(".gallery-collection-wrapper");
+const galleryContainer = document.querySelector(".gallery-container");
+
+// Create a duplicate of the gallery content for infinite scrolling
+const clone = galleryWrapper.cloneNode(true);
+galleryContainer.appendChild(clone);
+
+// Update Draggable with infinite scrolling
+Draggable.create(".gallery-collection-wrapper", {
+    type: "x",
+    bounds: ".gallery-container",
+    inertia: true,
+    edgeResistance: 0.8,
+    onDrag: function() {
+        console.log("dragging");
+    },
+    onDragEnd: function() {
         // Reset position to the beginning or end based on direction
         const maxScrollX = galleryWrapper.scrollWidth / 2;
         const currentX = galleryWrapper.scrollLeft;
@@ -336,8 +344,9 @@ function solutionAccordion2() {
             galleryWrapper.scrollLeft = maxScrollX;
         }
     },
-      cursor: "grabbing"
-  });
+    cursor: "grabbing"
+});
+
 
     $(".templates-carousel").owlCarousel({
       items: 3,
