@@ -415,6 +415,37 @@ $('.navbar_mob_dd_body .pr-links .pr-link-block').each(function() {
 });
 
 
+
+
+  // Function to update styles for the active items
+  function updateActiveStyles() {
+      var $activeItems = $('.content-carousel-w-icons .owl-item.active');
+      if ($activeItems.length > 1) {
+          // Remove opacity from all active items
+          $activeItems.css('opacity', '');
+          // Apply opacity only to the second active item
+          $activeItems.eq(1).css('opacity', '0.5');
+      }
+  }
+
+  // Initial update of styles
+  updateActiveStyles();
+
+  // Observe changes to the class and update styles accordingly
+  var observer = new MutationObserver(function() {
+      updateActiveStyles();
+  });
+
+  // Start observing
+  observer.observe($('.content-carousel-w-icons')[0], {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['class']
+  });
+
+
+
 solutionAccordion2();
 formSliderClose();
 navSearch('.navbar_search_input input', '.nav_search_btn');
