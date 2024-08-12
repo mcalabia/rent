@@ -316,37 +316,18 @@ function solutionAccordion2() {
 }
 
 
-gsap.registerPlugin(Draggable);
+  gsap.registerPlugin(Draggable);
 
-const galleryWrapper = document.querySelector(".gallery-collection-wrapper");
-const galleryContainer = document.querySelector(".gallery-container");
-
-// Create a duplicate of the gallery content for infinite scrolling
-const clone = galleryWrapper.cloneNode(true);
-galleryContainer.appendChild(clone);
-
-// Update Draggable with infinite scrolling
-Draggable.create(".gallery-collection-wrapper", {
-    type: "x",
-    bounds: ".gallery-container",
-    inertia: true,
-    edgeResistance: 0.8,
-    onDrag: function() {
-        console.log("dragging");
-    },
-    onDragEnd: function() {
-        // Reset position to the beginning or end based on direction
-        const maxScrollX = galleryWrapper.scrollWidth / 2;
-        const currentX = galleryWrapper.scrollLeft;
-        if (currentX >= maxScrollX) {
-            galleryWrapper.scrollLeft = 0;
-        } else if (currentX <= 0) {
-            galleryWrapper.scrollLeft = maxScrollX;
-        }
-    },
-    cursor: "grabbing"
-});
-
+  Draggable.create(".gallery-collection-wrapper", {
+      type: "x",
+      bounds: ".gallery-container",
+      inertia: true,
+      edgeResistance: 0.8,
+      onDrag: function() {
+          console.log("dragging");
+      },
+      cursor: "grabbing"
+  });
 
     $(".templates-carousel").owlCarousel({
       items: 3,
