@@ -252,6 +252,9 @@ display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
 }
+.gallery-collection-top .owl-stage, .gallery-collection-top .owl-item{
+    align-items: flex-end;
+}
 
 .templates-carousel.owl-loaded, .gallery-collection-top.owl-loaded{
 overflow: hidden;

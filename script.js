@@ -333,11 +333,11 @@ function solutionAccordion2() {
     items: 4,
     autoWidth:true,
     loop: true,
-    margin: 20,
+    margin: 40,
     center: true,
     nav: false,
     autoplay: true,        
-    autoplayTimeout: 3000,  
+    autoplayTimeout: 5000,  
     autoplayHoverPause: true 
 });
 
