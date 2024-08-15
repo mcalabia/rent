@@ -335,9 +335,7 @@ function solutionAccordion2() {
     loop: true,
     margin: 20,
     center: true,
-    nav: true,
-    navText: ["", ""],
-    autoWidth: true,
+    nav: false,
     autoplay: true,        
     autoplayTimeout: 3000,  
     autoplayHoverPause: true 
