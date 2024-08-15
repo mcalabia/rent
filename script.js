@@ -316,18 +316,34 @@ function solutionAccordion2() {
 }
 
 
-  gsap.registerPlugin(Draggable);
+  // gsap.registerPlugin(Draggable);
 
-  Draggable.create(".gallery-collection-wrapper", {
-      type: "x",
-      bounds: ".gallery-container",
-      inertia: true,
-      edgeResistance: 0.8,
-      onDrag: function() {
-          // console.log("dragging");
-      },
-      cursor: "grabbing"
-  });
+  // Draggable.create(".gallery-collection-wrapper", {
+  //     type: "x",
+  //     bounds: ".gallery-container",
+  //     inertia: true,
+  //     edgeResistance: 0.8,
+  //     onDrag: function() {
+  //         // console.log("dragging");
+  //     },
+  //     cursor: "grabbing"
+  // });
+
+  $(".gallery-collection-top").owlCarousel({
+    items: 4,
+    autoWidth:true,
+    loop: true,
+    margin: 20,
+    center: true,
+    nav: true,
+    navText: ["", ""],
+    autoWidth: true,
+    autoplay: true,        
+    autoplayTimeout: 3000,  
+    autoplayHoverPause: true 
+});
+
+
 
     $(".templates-carousel").owlCarousel({
       items: 3,
