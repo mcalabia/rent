@@ -194,7 +194,7 @@ transition: opacity 0.5s ease, transform 0.5s ease;
 width: 70vw!important;
 max-width: 988px;
 }
-.templates-carousel img, .gallery-collection-top img{
+.templates-carousel img, .gallery-collection-top img, .gallery-collection-bottom img{
 width: 100%;
 }
 .templates-carousel .owl-item.center .tmpl-content{
@@ -230,7 +230,7 @@ margin: 0 5%;
         width: 40px!important;
         height: 40px!important;
     }   
-    .templates-carousel .tmpl-content, .gallery-collection-top .tmpl-content{
+    .templates-carousel .tmpl-content, .gallery-collection-top .tmpl-content, .gallery-collection-bottom .tmpl-content{
         width: 90vw!important;
     }
 }
@@ -247,7 +247,9 @@ background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/
 .templates-carousel .owl-stage,
 .templates-carousel .owl-item, 
 .gallery-collection-top .owl-stage,
-.gallery-collection-top .owl-item{
+.gallery-collection-top .owl-item,
+.gallery-collection-bottom .owl-stage,
+.gallery-collection-bottom .owl-item{
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -255,12 +257,15 @@ display: flex;
 .gallery-collection-top .owl-stage, .gallery-collection-top .owl-item{
     align-items: flex-end;
 }
+.gallery-collection-bottom .owl-stage, .gallery-collection-bottom .owl-item{
+    align-items: flex-start;
+}
 
-.templates-carousel.owl-loaded, .gallery-collection-top.owl-loaded{
+.templates-carousel.owl-loaded, .gallery-collection-top.owl-loaded, .gallery-collection-bottom.owl-loaded{
 overflow: hidden;
 
 }
-.templates-carousel.owl-carousel, .gallery-collection-top.owl-carousel{
+.templates-carousel.owl-carousel, .gallery-collection-top.owl-carousel, .gallery-collection-bottom.owl-carousel{
 display: block;
 }
 

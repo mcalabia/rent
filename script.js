@@ -329,7 +329,7 @@ function solutionAccordion2() {
   //     cursor: "grabbing"
   // });
 
-  $(".gallery-collection-top").owlCarousel({
+$(".gallery-collection-top").owlCarousel({
     items: 4,
     autoWidth:true,
     loop: true,
@@ -339,6 +339,18 @@ function solutionAccordion2() {
     autoplay: true,        
     autoplayTimeout: 5000,  
     autoplayHoverPause: true 
+});
+
+$(".gallery-collection-bottom").owlCarousel({
+  items: 4,
+  autoWidth:true,
+  loop: true,
+  margin: 40,
+  center: true,
+  nav: false,
+  autoplay: true,        
+  autoplayTimeout: 5000,  
+  autoplayHoverPause: true 
 });
 
 
