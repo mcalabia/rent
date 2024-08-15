@@ -183,7 +183,7 @@ section.prop-fixed-scroll .pfp-item {
 /* TEMPLATE CAROUSEL */
 
 
-.templates-carousel{
+.templates-carousel, .gallery-collection-top{
     width: 100%;
 }
 .templates-carousel .tmpl-content {
@@ -194,10 +194,10 @@ transition: opacity 0.5s ease, transform 0.5s ease;
 width: 70vw!important;
 max-width: 988px;
 }
-.templates-carousel img{
+.templates-carousel img, .gallery-collection-top img{
 width: 100%;
 }
-.templates-carousel .owl-item.center .tmpl-content {
+.templates-carousel .owl-item.center .tmpl-content{
 opacity: 1!important;
 transform: scale(1); /* Slightly zoom in the center image */
 }
@@ -230,7 +230,7 @@ margin: 0 5%;
         width: 40px!important;
         height: 40px!important;
     }   
-    .templates-carousel .tmpl-content {
+    .templates-carousel .tmpl-content, .gallery-collection-top .tmpl-content{
         width: 90vw!important;
     }
 }
@@ -245,17 +245,19 @@ right: 10px;
 background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66be708ab04d58d9e628c74e_66a2c187470381de80745aa5_arrow-right%20(1).svg')!important; /* Update the path */
 }
 .templates-carousel .owl-stage,
-.templates-carousel .owl-item{
+.templates-carousel .owl-item, 
+.gallery-collection-top .owl-stage,
+.gallery-collection-top .owl-item{
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
 }
 
-.templates-carousel.owl-loaded{
+.templates-carousel.owl-loaded, .gallery-collection-top.owl-loaded{
 overflow: hidden;
 
 }
-.templates-carousel.owl-carousel{
+.templates-carousel.owl-carousel, .gallery-collection-top.owl-carousel{
 display: block;
 }
 
