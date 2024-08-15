@@ -336,7 +336,10 @@ function solutionAccordion2() {
       center: true,
       nav: true,
       navText: ["", ""],
-      autoWidth: true
+      autoWidth: true,
+      autoplay: true,        
+      autoplayTimeout: 3000,  
+      autoplayHoverPause: true 
   });
   // Add 'center' class to the middle item
   function updateCenterClass() {
