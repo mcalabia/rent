@@ -237,12 +237,12 @@ margin: 0 5%;
 
 .templates-carousel .owl-prev {
 left: 10px;
-background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66a2c184ca2c5560236f9e52_arrow-left.svg')!important; /* Update the path */
+background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66be708865484b0097a9afa2_66a2c184ca2c5560236f9e52_arrow-left%20(1).svg')!important; /* Update the path */
 }
 
 .templates-carousel .owl-next {
 right: 10px;
-background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66a2c187470381de80745aa5_arrow-right.svg')!important; /* Update the path */
+background-image: url('https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66be708ab04d58d9e628c74e_66a2c187470381de80745aa5_arrow-right%20(1).svg')!important; /* Update the path */
 }
 .templates-carousel .owl-stage,
 .templates-carousel .owl-item{
