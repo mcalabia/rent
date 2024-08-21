@@ -323,3 +323,10 @@ display: block;
     font-weight: 400!important;
 }
 
+.dark-mode{
+	background-color: var(--gray-700);
+}
+
+.dark-mode div, .dark-mode p, .dark-mode h2, .dark-mode h1, .dark-mode h3, .dark-mode h4, .dark-mode .eyebrow{
+  color: var(--white);
+}
