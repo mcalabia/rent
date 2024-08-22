@@ -397,7 +397,7 @@ img.about-thumbnail.featured-thumbnail{
     filter: invert(100%);
 }
 .dark-mode .desktop-h3.is-lp{
-    color: var(--indigo)!important;
+    color: var(--indigo-400)!important;
 }
 .dark-mode .lp-inner {
     border-color: var(--indigo) !important;
