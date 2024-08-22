@@ -365,12 +365,15 @@ img.about-thumbnail.featured-thumbnail{
     stroke: var(--white);
 }
 
-.dark-mode .global-cta-text:hover {
+.dark-mode .global-cta:hover {
+    background-color: var(--indigo);
+}
+.dark-mode .global-cta:hover .global-cta-text {
     color: var(--white)!important;
 }
-.dark-mode .global-cta-icon svg circle:hover {
+.dark-mode .global-cta:hover .global-cta-icon svg circle {
     fill: var(--white);
 }
-.dark-mode .global-cta-icon svg path:hover {
+.dark-mode .global-cta:hover .global-cta-icon svg path {
     stroke: var(--indigo);
 }
