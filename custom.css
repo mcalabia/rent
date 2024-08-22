@@ -409,4 +409,5 @@ img.about-thumbnail.featured-thumbnail{
 
 .dark-mode .whitebox{
     background-color: var(--black);
+    border-color: var(--black);
 }
