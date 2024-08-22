@@ -368,12 +368,29 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode .global-cta:hover {
     background-color: var(--indigo);
 }
+.dark-mode .global-cta {
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .global-cta-text,
+.dark-mode .global-cta-icon svg circle,
+.dark-mode .global-cta-icon svg path {
+    transition: color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+.dark-mode .global-cta:hover {
+    background-color: var(--indigo);
+}
+
 .dark-mode .global-cta:hover .global-cta-text {
     color: var(--white)!important;
 }
+
 .dark-mode .global-cta:hover .global-cta-icon svg circle {
     fill: var(--white);
 }
+
 .dark-mode .global-cta:hover .global-cta-icon svg path {
     stroke: var(--indigo);
 }
+
