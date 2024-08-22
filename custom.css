@@ -328,7 +328,7 @@ img.about-thumbnail.featured-thumbnail{
 }
 
 .dark-mode{
-	background-color: var(--gray-700);
+	background-color: var(--gray-700)!important;
 }
 .dark-mode .key-features-box, .dark-mode .hero-heading-center{
 	background-color: var(--black);
