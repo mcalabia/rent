@@ -349,3 +349,12 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode div, .dark-mode p, .dark-mode h2, .dark-mode h1, .dark-mode h3, .dark-mode h4, .dark-mode .eyebrow{
   color: var(--white)!important;
 }
+.dark-mode .global-cta{
+    border: var(--white);
+    color: var(--indigo);
+    background-color: var(--white);
+}
+
+.dark-mode .global-cta-text{
+    color: var(--indigo)!important;
+}
