@@ -406,3 +406,7 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode .lp-overlay{
     background-image: linear-gradient(180deg, #fff0, var(--black) 70%);
 }
+
+.dark-mode .whitebox{
+    background-color: var(--black);
+}
