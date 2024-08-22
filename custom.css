@@ -393,4 +393,6 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode .global-cta:hover .global-cta-icon svg path {
     stroke: var(--indigo);
 }
-
+.dark-mode .pl-logo-container img{
+    filter: invert(100%);
+}
