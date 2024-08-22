@@ -400,7 +400,7 @@ img.about-thumbnail.featured-thumbnail{
     color: var(--indigo-400)!important;
 }
 .dark-mode .lp-inner {
-    border-color: var(--indigo) !important;
+    border-color: var(--black) !important;
     background-color: #000000;
 }
 .dark-mode .lp-overlay{
