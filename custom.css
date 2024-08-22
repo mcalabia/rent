@@ -323,6 +323,10 @@ display: block;
     font-weight: 400!important;
 }
 
+img.about-thumbnail.featured-thumbnail_{
+    height: 100%!important;
+}
+
 .dark-mode{
 	background-color: var(--gray-700);
 }
