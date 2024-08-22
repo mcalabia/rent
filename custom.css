@@ -358,3 +358,19 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode .global-cta-text{
     color: var(--indigo)!important;
 }
+.dark-mode .global-cta-icon svg circle {
+    fill: var(--indigo);
+}
+.dark-mode .global-cta-icon svg path {
+    stroke: var(--white);
+}
+
+.dark-mode .global-cta-text:hover {
+    color: var(--white)!important;
+}
+.dark-mode .global-cta-icon svg circle:hover {
+    fill: var(--white);
+}
+.dark-mode .global-cta-icon svg path:hover {
+    stroke: var(--indigo);
+}
