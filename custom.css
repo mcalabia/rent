@@ -406,7 +406,9 @@ img.about-thumbnail.featured-thumbnail{
     stroke: var(--indigo);
 }
 
-
+.dark-mode .cta-get-started-form.global-cta-text{
+    color: var(--white);;
+}
 
 .dark-mode .pl-logo-container img{
     filter: invert(100%);
@@ -430,3 +432,4 @@ img.about-thumbnail.featured-thumbnail{
 .get-started-form-slider div {
     color: initial;
 }
+
