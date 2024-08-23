@@ -367,7 +367,7 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--white);
 }
 
-.dark-mode p.global-cta-text:not(.get-started-form-slider p.global-cta-text){
+.dark-mode p.global-cta-text:not(.get-started-form-slider p.global-cta-text), .dark-mode .whitebox-number{
     color: var(--indigo)!important;
 }
 .dark-mode .global-cta-icon svg circle:not(.get-started-form-slider .global-cta-icon svg circle) {
@@ -435,4 +435,6 @@ img.about-thumbnail.featured-thumbnail{
 .get-started-form-slider div {
     color: initial;
 }
+
+
 
