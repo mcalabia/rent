@@ -338,70 +338,70 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--black);
 }
 
-/* Exclude .get-started-form-slider from dark mode styling */
-.dark-mode :not(.get-started-form-slider) .cta.cta-white {
+/* Exclude .get-started-slider from dark mode styling */
+.dark-mode :not(.get-started-slider) .cta.cta-white {
     border-color: var(--white);
     color: #ffffff;
     background-color: transparent;
     background-image: url(https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66c67360cffcbe6be675ea7a_white-arrow.svg);
 }
 
-.dark-mode :not(.get-started-form-slider) .cta.cta-white:hover {
+.dark-mode :not(.get-started-slider) .cta.cta-white:hover {
     border-color: var(--indigo);
     background-color: var(--indigo);
 }
 
-.dark-mode :not(.get-started-form-slider) div,
-.dark-mode :not(.get-started-form-slider) p,
-.dark-mode :not(.get-started-form-slider) h2,
-.dark-mode :not(.get-started-form-slider) h1,
-.dark-mode :not(.get-started-form-slider) h3,
-.dark-mode :not(.get-started-form-slider) h4,
-.dark-mode :not(.get-started-form-slider) .eyebrow {
+.dark-mode :not(.get-started-slider) div,
+.dark-mode :not(.get-started-slider) p,
+.dark-mode :not(.get-started-slider) h2,
+.dark-mode :not(.get-started-slider) h1,
+.dark-mode :not(.get-started-slider) h3,
+.dark-mode :not(.get-started-slider) h4,
+.dark-mode :not(.get-started-slider) .eyebrow {
     color: var(--white)!important;
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta {
+.dark-mode :not(.get-started-slider) .global-cta {
     border: var(--white);
     color: var(--indigo);
     background-color: var(--white);
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta-text {
+.dark-mode :not(.get-started-slider) .global-cta-text {
     color: var(--indigo)!important;
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta-icon svg circle {
+.dark-mode :not(.get-started-slider) .global-cta-icon svg circle {
     fill: var(--indigo);
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta-icon svg path {
+.dark-mode :not(.get-started-slider) .global-cta-icon svg path {
     stroke: var(--white);
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta:hover {
+.dark-mode :not(.get-started-slider) .global-cta:hover {
     background-color: var(--indigo);
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta {
+.dark-mode :not(.get-started-slider) .global-cta {
     transition: background-color 0.3s ease;
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta-text,
-.dark-mode :not(.get-started-form-slider) .global-cta-icon svg circle,
-.dark-mode :not(.get-started-form-slider) .global-cta-icon svg path {
+.dark-mode :not(.get-started-slider) .global-cta-text,
+.dark-mode :not(.get-started-slider) .global-cta-icon svg circle,
+.dark-mode :not(.get-started-slider) .global-cta-icon svg path {
     transition: color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta:hover .global-cta-text {
+.dark-mode :not(.get-started-slider) .global-cta:hover .global-cta-text {
     color: var(--white)!important;
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta:hover .global-cta-icon svg circle {
+.dark-mode :not(.get-started-slider) .global-cta:hover .global-cta-icon svg circle {
     fill: var(--white);
 }
 
-.dark-mode :not(.get-started-form-slider) .global-cta:hover .global-cta-icon svg path {
+.dark-mode :not(.get-started-slider) .global-cta:hover .global-cta-icon svg path {
     stroke: var(--indigo);
 }
 
