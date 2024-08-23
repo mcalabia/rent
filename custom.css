@@ -409,6 +409,9 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode .cta-get-started-form.global-cta-text{
     color: var(--white);;
 }
+.dark-mode .cta-get-started-form.global-cta-text:hover{
+    color: var(--indigo);;
+}
 
 .dark-mode .pl-logo-container img{
     filter: invert(100%);
