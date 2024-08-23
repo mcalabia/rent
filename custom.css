@@ -327,6 +327,9 @@ img.about-thumbnail.featured-thumbnail{
     height: 100%!important;
 }
 
+
+/* DARK MODE */
+
 .dark-mode{
 	background-color: var(--gray-700)!important;
 }
@@ -346,9 +349,17 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--indigo);
 }
 
-.dark-mode div, .dark-mode p, .dark-mode h2, .dark-mode h1, .dark-mode h3, .dark-mode h4, .dark-mode .eyebrow{
+.dark-mode div:not(.get-started-form-slider div), 
+.dark-mode p:not(.get-started-form-slider p), 
+.dark-mode h2:not(.get-started-form-slider h2), 
+.dark-mode h1:not(.get-started-form-slider h1), 
+.dark-mode h3:not(.get-started-form-slider h3), 
+.dark-mode h4:not(.get-started-form-slider h4), 
+.dark-mode .eyebrow:not(.get-started-form-slider .eyebrow) {
   color: var(--white)!important;
 }
+
+
 .dark-mode .global-cta{
     border: var(--white);
     color: var(--indigo);
@@ -410,62 +421,4 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode .whitebox{
     background-color: var(--black);
     border-color: var(--black);
-}
-
-/* Override dark mode styles for elements inside .get-started-form-slider */
-.dark-mode .get-started-form-slider div, 
-.dark-mode .get-started-form-slider p, 
-.dark-mode .get-started-form-slider h2, 
-.dark-mode .get-started-form-slider h1, 
-.dark-mode .get-started-form-slider h3, 
-.dark-mode .get-started-form-slider h4, 
-.dark-mode .get-started-form-slider .eyebrow {
-  color: initial; /* or specify a different color */
-}
-
-.dark-mode .get-started-form-slider .cta.cta-white {
-    border-color: initial; /* or specify a different color */
-    color: initial; /* or specify a different color */
-    background-color: initial; /* or specify a different color */
-    background-image: initial; /* or specify a different image */
-}
-
-.dark-mode .get-started-form-slider .global-cta {
-    border: initial; /* or specify a different color */
-    color: initial; /* or specify a different color */
-    background-color: initial; /* or specify a different color */
-}
-
-.dark-mode .get-started-form-slider .global-cta-text {
-    color: initial; /* or specify a different color */
-}
-
-.dark-mode .get-started-form-slider .global-cta-icon svg circle {
-    fill: initial; /* or specify a different color */
-}
-
-.dark-mode .get-started-form-slider .global-cta-icon svg path {
-    stroke: initial; /* or specify a different color */
-}
-
-.dark-mode .get-started-form-slider .pl-logo-container img {
-    filter: none; /* or specify a different filter */
-}
-
-.dark-mode .get-started-form-slider .desktop-h3.is-lp {
-    color: initial; /* or specify a different color */
-}
-
-.dark-mode .get-started-form-slider .lp-inner {
-    border-color: initial; /* or specify a different color */
-    background-color: initial; /* or specify a different color */
-}
-
-.dark-mode .get-started-form-slider .lp-overlay {
-    background-image: initial; /* or specify a different image */
-}
-
-.dark-mode .get-started-form-slider .whitebox {
-    background-color: initial; /* or specify a different color */
-    border-color: initial; /* or specify a different color */
 }
