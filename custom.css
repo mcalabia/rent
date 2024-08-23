@@ -349,16 +349,7 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--indigo);
 }
 
-.dark-mode div:not(.get-started-form-slider div), 
-.dark-mode div strong:not(.get-started-form-slider div strong), 
-.dark-mode p:not(.get-started-form-slider p), 
-.dark-mode h2:not(.get-started-form-slider h2), 
-.dark-mode h1:not(.get-started-form-slider h1), 
-.dark-mode h3:not(.get-started-form-slider h3), 
-.dark-mode h4:not(.get-started-form-slider h4), 
-.dark-mode .eyebrow:not(.get-started-form-slider .eyebrow) {
-  color: var(--white)!important;
-}
+
 .dark-mode .global-cta{
     border: var(--white);
     color: var(--indigo);
@@ -424,4 +415,15 @@ img.about-thumbnail.featured-thumbnail{
 
 .get-started-form-slider div {
     color: initial;
+}
+
+.dark-mode div:not(.get-started-form-slider div), 
+.dark-mode div strong:not(.get-started-form-slider div strong), 
+.dark-mode p:not(.get-started-form-slider p), 
+.dark-mode h2:not(.get-started-form-slider h2), 
+.dark-mode h1:not(.get-started-form-slider h1), 
+.dark-mode h3:not(.get-started-form-slider h3), 
+.dark-mode h4:not(.get-started-form-slider h4), 
+.dark-mode .eyebrow:not(.get-started-form-slider .eyebrow) {
+  color: var(--white)!important;
 }
