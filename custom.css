@@ -421,3 +421,7 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--black);
     border-color: var(--black);
 }
+
+.get-started-form-slider div {
+    color: initial;
+}
