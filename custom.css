@@ -351,7 +351,7 @@ img.about-thumbnail.featured-thumbnail{
 
 .dark-mode div:not(.get-started-form-slider div), 
 .dark-mode div strong:not(.get-started-form-slider div strong), 
-.dark-mode p:not(.get-started-form-slider p), 
+.dark-mode p, 
 .dark-mode h2:not(.get-started-form-slider h2), 
 .dark-mode h1:not(.get-started-form-slider h1), 
 .dark-mode h3:not(.get-started-form-slider h3), 
