@@ -432,8 +432,12 @@ img.about-thumbnail.featured-thumbnail{
     border-color: var(--black);
 }
 
-.get-started-form-slider div {
+.dark-mode .get-started-form-slider div {
     color: initial;
+}
+
+.dark-mode .indigo-highlight{
+    color: var(--indigo-400)!important;
 }
 
 
