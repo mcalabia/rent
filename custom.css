@@ -358,8 +358,6 @@ img.about-thumbnail.featured-thumbnail{
 .dark-mode .eyebrow:not(.get-started-form-slider .eyebrow) {
   color: var(--white)!important;
 }
-
-
 .dark-mode .global-cta{
     border: var(--white);
     color: var(--indigo);
