@@ -337,25 +337,25 @@ img.about-thumbnail.featured-thumbnail{
 	background-color: var(--black);
 }
 
-.dark-mode .cta.cta-white:not(.get-started-slider .cta.cta-white){
+.dark-mode .cta.cta-white:not(.get-started-form-slider .cta.cta-white){
     border-color: var(--white);
     color: #ffffff;
     background-color: transparent;
     background-image: url(https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66c67360cffcbe6be675ea7a_white-arrow.svg);
 }
 
-.dark-mode .cta.cta-white:hover:not(.get-started-slider .cta.cta-white:hover){
+.dark-mode .cta.cta-white:hover:not(.get-started-form-slider p){
     border-color: var(--indigo);
     background-color: var(--indigo);
 }
 
-.dark-mode div:not(.get-started-slider div), 
-.dark-mode p:not(.get-started-slider p), 
-.dark-mode h2:not(.get-started-slider h2), 
-.dark-mode h1:not(.get-started-slider h1), 
-.dark-mode h3:not(.get-started-slider h3), 
-.dark-mode h4:not(.get-started-slider h4), 
-.dark-mode .eyebrow:not(.get-started-slider .eyebrow) {
+.dark-mode div:not(.get-started-form-slider div), 
+.dark-mode p:not(.get-started-form-slider p), 
+.dark-mode h2:not(.get-started-form-slider h2), 
+.dark-mode h1:not(.get-started-form-slider h1), 
+.dark-mode h3:not(.get-started-form-slider h3), 
+.dark-mode h4:not(.get-started-form-slider h4), 
+.dark-mode .eyebrow:not(.get-started-form-slider .eyebrow) {
   color: var(--white)!important;
 }
 
