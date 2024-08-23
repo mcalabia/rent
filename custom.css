@@ -426,10 +426,10 @@ img.about-thumbnail.featured-thumbnail{
 .get-started-form-slider .global-cta-text,
 .get-started-form-slider .global-cta-icon svg circle,
 .get-started-form-slider .global-cta-icon svg path {
-    background-color: inherit !important;
-    color: inherit !important;
-    border-color: inherit !important;
-    fill: inherit !important;
-    stroke: inherit !important;
+    background-color: initial !important;
+    color: initial !important;
+    border-color: initial !important;
+    fill: initial !important;
+    stroke: initial !important;
     filter: none !important;
 }
