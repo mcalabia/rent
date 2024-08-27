@@ -472,6 +472,9 @@ function handleResize() {
   }
 }
 
+$('.legal-nav-space').last().hide();
+
+
 // Call the handleResize function on document ready and window resize
 handleResize();
 $(window).resize(handleResize);
