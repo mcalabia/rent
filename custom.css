@@ -447,7 +447,7 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--indigo-100);
 }
 .light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions{
-	background-color: var(--indigo-100);
+	background-color: var(--indigo-100)!important;
 }
 .light-mode .sol-item
 {
