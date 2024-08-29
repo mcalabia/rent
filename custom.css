@@ -475,7 +475,7 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--black);
 }
 
-.light-mode .footer {
+.footer.light-mode {
     border-top: 1px solid var(--white);
 }
 
@@ -489,7 +489,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode h5,
 .light-mode h6,
 .light-mode .eyebrow,
-.light-mode.footer-link,
+.light-mode .footer-link,
 .light-mode .listitem{
   color: var(--black)!important;
 }
