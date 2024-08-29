@@ -328,7 +328,7 @@ img.about-thumbnail.featured-thumbnail{
 }
 
 
-/* DARK MODE */
+/* START OF DARK MODE */
 
 .dark-mode{
 	background-color: var(--gray-700)!important;
@@ -441,4 +441,46 @@ img.about-thumbnail.featured-thumbnail{
 }
 
 
+/* END OF DARK MODE */
+/* START OF LIGHT MODE */
+.light-mode{
+    background-color: var(--indigo-100);
+}
+.light-mode .key-features-box, .light-mode .hero-heading-center{
+	background-color: var(--indigo-100);
+}
+
+.light-mode div, 
+.light-mode div strong, 
+.light-mode p, 
+.light-mode h2, 
+.light-mode h1, 
+.light-mode h3, 
+.light-mode h4, 
+.light-mode .eyebrow {
+  color: var(--white)!important;
+}
+
+.light-mode .desktop-h3.is-lp{
+    color: var(--indigo-400)!important;
+}
+.light-mode .lp-inner {
+    border-color: var(--white) !important;
+    background-color: #ffffff;
+}
+
+.light-mode .whitebox{
+    background-color: var(--white);
+    border-color: var(--white);
+}
+
+.light-mode .indigo-highlight{
+    color: var(--indigo)!important;
+}
+
+/* END OF LIGHT MODE */
+
+.legal-nav-space:last-of-type {
+    display: none;
+  }
 
