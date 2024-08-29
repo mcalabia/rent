@@ -450,6 +450,10 @@ img.about-thumbnail.featured-thumbnail{
 	background-color: var(--indigo-100);
 }
 
+.light-mode .solutions.solutions-carousel{
+    background-color: var(--indigo-100)!important;
+}
+
 .light-mode div, 
 .light-mode div strong, 
 .light-mode p, 
