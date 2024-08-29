@@ -502,10 +502,10 @@ img.about-thumbnail.featured-thumbnail{
     color: var(--white)!important;
 }
 .light-mode .global-cta:hover circle{
-    fill: var(--white);
+    fill: var(--white)!important;
 }
 .light-mode .global-cta:hover path{
-    stroke: var(--indigo);
+    stroke: var(--indigo)!important;
 }
 .light-mode .global-cta{
     transition: background-color 0.3s ease;
