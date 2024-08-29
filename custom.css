@@ -544,14 +544,14 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode .global-cta, .light-mode .global-cta .global-cta-text, .light-mode .global-cta circle, .light-mode .global-cta path{
     transition: background-color 0.3s ease;
 }
-.light-mode .cta.cta-white{
-    border-color: var(--indigo);
+.light-mode .cta.w-button{
+    border: 1px solid var(--indigo);
     color: var(--indigo)!important;
     background-color: transparent;
     background-image: url(https://cdn.prod.website-files.com/664bb28e4eaef6676bc7f01a/664faa2a8ba0b955ed6066cb_Group%20422.svg);
 }
 
-.light-mode .cta.cta-white:hover{
+.light-mode .cta.w-button:hover{
     background-color: var(--indigo);
     background-image: url(https://cdn.prod.website-files.com/664bb28e4eaef6676bc7f01a/664bcac6d7096d06c64a8b07_Group%20422.svg);
 }
