@@ -545,15 +545,15 @@ img.about-thumbnail.featured-thumbnail{
     transition: background-color 0.3s ease;
 }
 .light-mode .cta.cta-white{
-    border-color: var(--white);
-    color: #ffffff;
+    border-color: var(--indigo);
+    color: var(--indigo)!important;
     background-color: transparent;
-    background-image: url(https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66c67360cffcbe6be675ea7a_white-arrow.svg);
+    background-image: url(https://cdn.prod.website-files.com/664bb28e4eaef6676bc7f01a/664faa2a8ba0b955ed6066cb_Group%20422.svg);
 }
 
 .light-mode .cta.cta-white:hover{
-    border-color: var(--indigo);
     background-color: var(--indigo);
+    background-image: url(https://cdn.prod.website-files.com/664bb28e4eaef6676bc7f01a/664bcac6d7096d06c64a8b07_Group%20422.svg);
 }
 
 /* END OF LIGHT MODE */
