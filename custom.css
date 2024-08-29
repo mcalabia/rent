@@ -458,7 +458,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode h3, 
 .light-mode h4, 
 .light-mode .eyebrow {
-  color: var(--white)!important;
+  color: var(--black)!important;
 }
 
 .light-mode .desktop-h3.is-lp{
