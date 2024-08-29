@@ -476,7 +476,7 @@ img.about-thumbnail.featured-thumbnail{
 }
 
 .footer.light-mode {
-    border-top: 1px solid var(--white);
+    border-top: 1px solid var(--indigo);
 }
 
 .light-mode div, 
