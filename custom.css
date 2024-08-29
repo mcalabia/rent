@@ -552,6 +552,7 @@ img.about-thumbnail.featured-thumbnail{
 }
 
 .light-mode .cta.w-button:hover{
+    color: var(--white)!important;
     background-color: var(--indigo);
     background-image: url(https://cdn.prod.website-files.com/664bb28e4eaef6676bc7f01a/664bcac6d7096d06c64a8b07_Group%20422.svg);
 }
