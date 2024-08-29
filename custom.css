@@ -482,6 +482,36 @@ img.about-thumbnail.featured-thumbnail{
     color: var(--indigo)!important;
 }
 
+.light-mode .global-cta {
+    background-color: var(--indigo-100);
+}
+.light-mode .global-cta-text{
+    color: var(--indigo)!important;
+}
+.light-mode .global-cta circle{
+    fill: var(--indigo);
+}
+.light-mode .global-cta path{
+    stroke: var(--white);
+}
+
+.light-mode .global-cta:hover {
+    background-color: var(--indigo);
+}
+.light-mode  .global-cta:hover .global-cta-text{
+    color: var(--white)!important;
+}
+.light-mode .global-cta:hover circle{
+    fill: var(--indigo);
+}
+.light-mode .global-cta path{
+    stroke: var(--indigo);
+}
+.light-mode .global-cta{
+    transition: background-color 0.3s ease;
+}
+
+
 /* END OF LIGHT MODE */
 
 .legal-nav-space:last-of-type {
