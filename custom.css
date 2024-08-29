@@ -498,7 +498,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode .global-cta:hover {
     background-color: var(--indigo);
 }
-.light-mode  .global-cta:hover .global-cta-text{
+.light-mode .global-cta:hover .global-cta-text{
     color: var(--white)!important;
 }
 .light-mode .global-cta:hover circle{
@@ -507,7 +507,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode .global-cta:hover path{
     stroke: var(--indigo)!important;
 }
-.light-mode .global-cta{
+.light-mode .global-cta, .light-mode .global-cta .global-cta-text, .light-mode .global-cta circle, .light-mode .global-cta path{
     transition: background-color 0.3s ease;
 }
 
