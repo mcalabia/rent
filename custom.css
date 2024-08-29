@@ -458,6 +458,13 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--indigo-100)!important;
 }
 
+.light-mode .faq-icon svg circle{
+    stroke: var(--indigo);
+}
+.light-mode .faq-icon svg path{
+    fill: var(--indigo);
+}
+
 .light-mode div, 
 .light-mode div strong, 
 .light-mode p, 
@@ -516,7 +523,6 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode .global-cta, .light-mode .global-cta .global-cta-text, .light-mode .global-cta circle, .light-mode .global-cta path{
     transition: background-color 0.3s ease;
 }
-
 
 /* END OF LIGHT MODE */
 
