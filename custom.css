@@ -446,13 +446,13 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode{
     background-color: var(--indigo-100)!important;
 }
-.light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions, .light-mode .stat-card-div{
+.light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions{
 	background-color: var(--indigo-100)!important;
 }
 .light-mode .faq-item, .light-mode .faq-body{
     background-color: var(--white)!important;
 }
-.light-mode .sol-item
+.light-mode .sol-item, .light-mode .stat-card-div
 {
     background-color: var(--white);
 }
@@ -471,6 +471,7 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--black);
 }
 
+
 .light-mode div, 
 .light-mode div strong, 
 .light-mode p, 
@@ -486,6 +487,10 @@ img.about-thumbnail.featured-thumbnail{
 
 .light-mode .desktop-h3.is-lp{
     color: var(--indigo-400)!important;
+}
+
+.light-mode a.global-cta.white.w-inline-block{
+    border-color: var(--indigo) !important;
 }
 .light-mode .lp-inner {
     border-color: var(--white) !important;
