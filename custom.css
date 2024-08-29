@@ -486,7 +486,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode h5,
 .light-mode h6,
 .light-mode .eyebrow,
-.light-mode.footer-link 
+.light-mode.footer-link,
 .light-mode .listitem{
   color: var(--black)!important;
 }
