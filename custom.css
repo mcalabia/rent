@@ -544,7 +544,17 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode .global-cta, .light-mode .global-cta .global-cta-text, .light-mode .global-cta circle, .light-mode .global-cta path{
     transition: background-color 0.3s ease;
 }
+.light-mode .cta.cta-white{
+    border-color: var(--white);
+    color: #ffffff;
+    background-color: transparent;
+    background-image: url(https://uploads-ssl.webflow.com/664bb28e4eaef6676bc7f01a/66c67360cffcbe6be675ea7a_white-arrow.svg);
+}
 
+.light-mode .cta.cta-white:hover{
+    border-color: var(--indigo);
+    background-color: var(--indigo);
+}
 
 /* END OF LIGHT MODE */
 
