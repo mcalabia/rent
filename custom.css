@@ -504,7 +504,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode .global-cta:hover circle{
     fill: var(--white);
 }
-.light-mode .global-cta path{
+.light-mode .global-cta:hover path{
     stroke: var(--indigo);
 }
 .light-mode .global-cta{
