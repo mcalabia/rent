@@ -475,6 +475,9 @@ img.about-thumbnail.featured-thumbnail{
     background-color: var(--black);
 }
 
+.light-mode .footer {
+    border-top: 1px solid var(--white);
+}
 
 .light-mode div, 
 .light-mode div strong, 
