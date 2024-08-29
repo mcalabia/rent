@@ -548,6 +548,6 @@ img.about-thumbnail.featured-thumbnail{
 /* END OF LIGHT MODE */
 
 .legal-nav-space:last-of-type {
-    display: none;
+    /* display: none; */
   }
 
