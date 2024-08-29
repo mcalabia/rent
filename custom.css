@@ -446,8 +446,12 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode{
     background-color: var(--indigo-100);
 }
-.light-mode .key-features-box, .light-mode .hero-heading-center{
+.light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions{
 	background-color: var(--indigo-100);
+}
+.light-mode .sol-item
+{
+    background-color: var(--white);
 }
 
 .light-mode .solutions.solutions-carousel{
@@ -483,7 +487,7 @@ img.about-thumbnail.featured-thumbnail{
 }
 
 .light-mode .global-cta {
-    background-color: var(--indigo-100);
+    background-color: transparent;
 }
 .light-mode .global-cta-text{
     color: var(--indigo)!important;
