@@ -446,7 +446,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode{
     background-color: var(--indigo-100)!important;
 }
-.light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions{
+.light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions, .light-mode .stat-card-div{
 	background-color: var(--indigo-100)!important;
 }
 .light-mode .faq-item, .light-mode .faq-body{
@@ -466,6 +466,9 @@ img.about-thumbnail.featured-thumbnail{
 }
 .light-mode .faq-icon svg path{
     fill: var(--black);
+}
+.light-mode .line-white-stats{
+    background-color: var(--black);
 }
 
 .light-mode div, 
