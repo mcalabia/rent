@@ -481,7 +481,9 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode h4, 
 .light-mode h5,
 .light-mode h6,
-.light-mode .eyebrow {
+.light-mode .eyebrow,
+.light-mode.footer-link 
+.light-mode .listitem{
   color: var(--black)!important;
 }
 
@@ -534,6 +536,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode .global-cta, .light-mode .global-cta .global-cta-text, .light-mode .global-cta circle, .light-mode .global-cta path{
     transition: background-color 0.3s ease;
 }
+
 
 /* END OF LIGHT MODE */
 
