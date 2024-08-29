@@ -446,7 +446,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode{
     background-color: var(--indigo-100)!important;
 }
-.light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions{
+.light-mode .key-features-box, .light-mode .hero-heading-center, .light-mode .solutions, .light-mode .faq-item{
 	background-color: var(--indigo-100)!important;
 }
 .light-mode .sol-item
@@ -465,6 +465,8 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode h1, 
 .light-mode h3, 
 .light-mode h4, 
+.light-mode h5,
+.light-mode h6,
 .light-mode .eyebrow {
   color: var(--black)!important;
 }
