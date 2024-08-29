@@ -490,7 +490,7 @@ img.about-thumbnail.featured-thumbnail{
 .light-mode h6,
 .light-mode .eyebrow,
 .light-mode .footer-link,
-.light-mode .listitem{
+.light-mode .listitem a{
   color: var(--black)!important;
 }
 
