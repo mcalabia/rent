@@ -571,7 +571,7 @@ img.about-thumbnail.featured-thumbnail{
         padding-top: 0px;
     }
     @page {
-        margin: 0 1in !important
+        margin: 1in 0 !important
       }
   }
   
