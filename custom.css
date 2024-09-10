@@ -564,10 +564,8 @@ img.about-thumbnail.featured-thumbnail{
   }
 
   @media print {
-    header, footer {
-      display: none;
+    .navbar_component, .footer {
+      display: none!important;
     }
-    @page { margin: 0; }
-  body { margin: 1.6cm; }
   }
   
