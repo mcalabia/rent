@@ -563,3 +563,9 @@ img.about-thumbnail.featured-thumbnail{
     /* display: none; */
   }
 
+  @media print {
+    header, footer {
+      display: none;
+    }
+  }
+  
