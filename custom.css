@@ -568,7 +568,7 @@ img.about-thumbnail.featured-thumbnail{
       display: none!important;
     }
     @page {
-        margin: 0.3in 1in 0.3in 1in !important
+        margin: 0 !important
       }
   }
   
