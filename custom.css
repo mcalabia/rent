@@ -567,5 +567,8 @@ img.about-thumbnail.featured-thumbnail{
     .navbar_component, .footer {
       display: none!important;
     }
+    @page {
+        margin: 0.3in 1in 0.3in 1in !important
+      }
   }
   
