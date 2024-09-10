@@ -567,5 +567,7 @@ img.about-thumbnail.featured-thumbnail{
     header, footer {
       display: none;
     }
+    @page { margin: 0; }
+  body { margin: 1.6cm; }
   }
   
