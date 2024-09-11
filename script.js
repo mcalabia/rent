@@ -454,21 +454,25 @@ function updateActiveStyles() {
 // Function to check screen size and apply styles
 function handleResize() {
   if ($(window).width() <= 767) {
-      // Observe changes to the class and update styles accordingly
-      var observer = new MutationObserver(function() {
+      var $carousel = $('.content-carousel-w-icons');
+
+      if ($carousel.length > 0) {  // Check if the element exists
+          // Observe changes to the class and update styles accordingly
+          var observer = new MutationObserver(function() {
+              updateActiveStyles();
+          });
+
+          // Start observing
+          observer.observe($carousel[0], {
+              childList: true,
+              subtree: true,
+              attributes: true,
+              attributeFilter: ['class']
+          });
+
+          // Initial update of styles
           updateActiveStyles();
-      });
-
-      // Start observing
-      observer.observe($('.content-carousel-w-icons')[0], {
-          childList: true,
-          subtree: true,
-          attributes: true,
-          attributeFilter: ['class']
-      });
-
-      // Initial update of styles
-      updateActiveStyles();
+      }
   }
 }
 
