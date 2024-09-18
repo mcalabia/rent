@@ -15,12 +15,17 @@
 	clip-path: inset(0% 100% 0% 0%);
 }
 
-.gs-container,
+
 section.prop-fixed-scroll .pfp-item {
 	transform: translateY(30px);
 	visibility: hidden;
 	opacity: 0;
 }
+.gs-container{
+    visibility: hidden;
+	opacity: 0;
+}
+
 .select-style {
     -webkit-appearance: none;
     -moz-appearance: none;
