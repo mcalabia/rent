@@ -24,7 +24,8 @@ section.prop-fixed-scroll .pfp-item {
 .gs-container{
     visibility: hidden;
 	opacity: 0;
-    transform: none;
+    transform: none !important;
+    position: relative;
 }
 
 .select-style {
