@@ -496,7 +496,8 @@ $('.listing-package .lp-cta').on('click', function() {
   var tagSection = $(this).attr('data-tag_section');
   console.log('eyy: '+tagSection); // You can replace this with any action you want to perform
   $('.packages-form .get-started-form-slider').attr('data-tag_section', tagSection);
-
+  $('.packages-form .get-started-form-slider .contact-selection .unit-selection').attr('data-tag_section', tagSection);
+  $('.packages-form .get-started-form-slider .cta-get-started-form').attr('data-tag_section', tagSection);
 });
 
 
