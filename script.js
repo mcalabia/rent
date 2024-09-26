@@ -494,7 +494,9 @@ mobileNavSearch();
 
 $('.listing-package .lp-cta').on('click', function() {
   var tagSection = $(this).attr('data-tag_section');
-  console.log(tagSection); // You can replace this with any action you want to perform
+  console.log('eyy: '+tagSection); // You can replace this with any action you want to perform
+  $('.packages-form .get-started-form-slider').attr('data-tag_section', tagSection);
+
 });
 
 
