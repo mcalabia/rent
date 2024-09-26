@@ -115,8 +115,8 @@ $(document).ready(function() {
           $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
         }});
 
-        gsap.to('.get-started-form-slider-packages, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
-          $('.get-started-form-slider-packages, .form-slider-mobile').css('display', 'none');
+        gsap.to('.get-started-form-slider-packages', { duration: 0.3, opacity: 0, onComplete: function() {
+          $('.get-started-form-slider-packages').css('display', 'none');
         }});
 
       }, 3000); // 3-second delay
