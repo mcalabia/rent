@@ -110,9 +110,15 @@ $(document).ready(function() {
     mutationsList.forEach(function(mutation) {
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
         setTimeout(function() {
+
         gsap.to('.get-started-form-slider, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
           $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
         }});
+
+        gsap.to('.get-started-form-slider-packages, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
+          $('.get-started-form-slider-packages, .form-slider-mobile').css('display', 'none');
+        }});
+
       }, 3000); // 3-second delay
       }
     });
@@ -495,9 +501,9 @@ mobileNavSearch();
 $('.listing-package .lp-cta').on('click', function() {
   var tagSection = $(this).attr('data-tag_section');
   console.log('eyy: '+tagSection); // You can replace this with any action you want to perform
-  $('.packages-form .get-started-form-slider').attr('data-tag_section', tagSection);
-  $('.packages-form .get-started-form-slider .contact-selection .unit-selection').attr('data-tag_section', tagSection);
-  $('.packages-form .get-started-form-slider .cta-get-started-form').attr('data-tag_section', tagSection);
+  $('.packages-form .get-started-form-slider-packages').attr('data-tag_section', tagSection);
+  $('.packages-form .get-started-form-slider-packages .contact-selection .unit-selection').attr('data-tag_section', tagSection);
+  $('.packages-form .get-started-form-slider-packages .cta-get-started-form').attr('data-tag_section', tagSection);
 });
 
 
