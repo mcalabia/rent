@@ -110,15 +110,13 @@ $(document).ready(function() {
     mutationsList.forEach(function(mutation) {
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
         setTimeout(function() {
-
-        // gsap.to('.get-started-form-slider, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
-        //   $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
-        // }});
-
         gsap.to('.get-started-form-slider, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
-          $('.get-started-form-slider-packages, .form-slider-mobile').css('display', 'none');
+          $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
         }});
 
+        gsap.to('.get-started-form-slider-packages, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
+          $('.get-started-form-slider-packages, .form-slider-mobile').css('display', 'none');
+        }});
       }, 3000); // 3-second delay
       }
     });
@@ -223,7 +221,7 @@ function navSearch(inputClass, btnClass){
 
 function formSliderClose(){
   $(document).mouseup(function(e) {
-    var container = $(".get-started-form-slider"); 
+    var container = $(".get-started-form-slider, .get-started-form-slider-packages"); 
     if (!container.is(e.target) && container.has(e.target).length === 0) {        
       container.css({
         transform: 'translate3d(101vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
