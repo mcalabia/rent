@@ -492,6 +492,12 @@ navSearch('.navbar_search_input_mobile input', '.nav_search_btn_mobile');
 keyFeaturesMobile();
 mobileNavSearch();
 
+$('.listing-package .lp-cta').on('click', function() {
+  var tagSection = $(this).attr('data-tag_section');
+  console.log(tagSection); // You can replace this with any action you want to perform
+});
+
+
 });
 
 
