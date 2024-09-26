@@ -111,12 +111,12 @@ $(document).ready(function() {
       if (mutation.attributeName === 'style' && $(mutation.target).css('display') === 'none') {
         setTimeout(function() {
 
-        gsap.to('.get-started-form-slider, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
-          $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
-        }});
+        // gsap.to('.get-started-form-slider, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
+        //   $('.get-started-form-slider, .form-slider-mobile').css('display', 'none');
+        // }});
 
-        gsap.to('div#get-started-packages', { duration: 0.3, opacity: 0, onComplete: function() {
-          $('div#get-started-packages').css('display', 'none');
+        gsap.to('.get-started-form-slider, .form-slider-mobile', { duration: 0.3, opacity: 0, onComplete: function() {
+          $('.get-started-form-slider-packages, .form-slider-mobile').css('display', 'none');
         }});
 
       }, 3000); // 3-second delay
