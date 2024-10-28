@@ -486,20 +486,22 @@ $('.legal-nav-space').last().hide();
 function setCompanySizeAttr(size) {
   if (size === 'small') {
     if ($('.get-started-form-slider input.cta-get-started-form').length) {
-      $('.get-started-form-slider input.cta-get-started-form').attr('data-tag_company_size', 'TestSmall');
+      $('.get-started-form-slider input.cta-get-started-form').attr('data-tag_company_size', 'Small');
     }
     if ($('.get-started-form-page input.cta-get-started-form').length) {
-      $('.get-started-form-page input.cta-get-started-form').attr('data-tag_company_size', 'TestSmall');
+      $('.get-started-form-page input.cta-get-started-form').attr('data-tag_company_size', 'Small');
     }
   } else if (size === 'large') {
     if ($('.get-started-form-slider input.cta-get-started-form').length) {
-      $('.get-started-form-slider input.cta-get-started-form').attr('data-tag_company_size', 'TestLarge');
+      $('.get-started-form-slider input.cta-get-started-form').attr('data-tag_company_size', 'Large');
     }
     if ($('.get-started-form-page input.cta-get-started-form').length) {
-      $('.get-started-form-page input.cta-get-started-form').attr('data-tag_company_size', 'TestLarge');
+      $('.get-started-form-page input.cta-get-started-form').attr('data-tag_company_size', 'Large');
     }
   }
 }
+
+setCompanySizeAttr('large')
 
 $('.unit-selection-small').click(function (e) { 
   setCompanySizeAttr('small')
