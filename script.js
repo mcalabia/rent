@@ -502,16 +502,16 @@ function setCompanySizeAttr(size) {
 }
 
 $('.unit-selection-small').click(function (e) { 
-  setCompanySizeAttr(small)
+  setCompanySizeAttr('small')
 });
 $('.unit-selection-small-mobile').click(function (e) { 
-  setCompanySizeAttr(small)
+  setCompanySizeAttr('small')
 });
 $('.unit-selection-large').click(function (e) { 
-  setCompanySizeAttr(large)
+  setCompanySizeAttr('large')
 });
 $('.unit-selection-large-mobile').click(function (e) { 
-  setCompanySizeAttr(large)
+  setCompanySizeAttr('large')
 });
 
 // Call the handleResize function on document ready and window resize
